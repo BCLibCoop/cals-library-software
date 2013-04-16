@@ -1,0 +1,19 @@
+#header {
+display:none !important;
+}
+
+#nav-container, #left-column {
+display:none !important;
+}
+
+#main #content, #content {
+width:650px !important;
+}
+
+#container {
+font-size:120% !important;
+}
+
+#resizer {
+font-size:120% !important;
+}

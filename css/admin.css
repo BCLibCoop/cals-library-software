@@ -1,0 +1,228 @@
+@import url("normalize.css");
+
+/* HEADINGS -------------------------------------------------- HEADINGS */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 0.4em;
+}
+h1 {
+    font-size: 150%;
+    font-weight: bold;
+    line-height: 1.2em;
+}
+h1.homeh1 {
+    color: #016F78;
+    padding-left: 12px;
+}
+p.h1-title {
+    color: #007b85;
+    font-size: 150%;
+    font-weight: bold;
+    line-height: 1.2em;
+    padding-bottom: 0.4em;
+}
+h2 {
+    font-weight: bold;
+    color: #007b85;
+    font-size: 130%;
+    font-weight: 600;
+    line-height: 1.3em;
+}
+h2 a {
+    color: #007b85;
+    text-decoration: none;
+}
+h2 a:hover { text-decoration: underline }
+h3 {
+    font-size: 120%;
+    font-weight: 600;
+    line-height: 1.2em;
+}
+h4 {
+    font-size: 110%;
+    line-height: 1.2em;
+    font-weight: bold;
+    padding-bottom: 0.3em;
+    color: #007b85;
+}
+h5 {
+    font-size: 100%;
+    line-height: 1.3em;
+    font-weight: bold;
+    padding-bottom: 0.2em;
+}
+h6 {
+    line-height: 1.3em;
+    font-weight: bold;
+    padding-bottom: 0.2em;
+}
+body {
+    height: 100%;
+    background-color: white;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+.error {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1em;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    color: #ff0006;
+}
+#logo img {
+    margin-left: 10px;
+    margin-bottom: 0px;
+    margin-right: 10px;
+    margin-top: 10px;
+    float: left;
+    max-height: 60px;
+    clear: both;
+    /* width: 200px; /* for modern browsers */
+    /* height: 130px; /* for IE5.x and IE6 */
+}
+#header {
+    width: 100%;
+    background-color: white;
+    height: 80px;
+}
+#libraryName {
+    clear: none;
+    margin-left: 150px;
+    width: 70%;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+#libraryDetails {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: small;
+    float: right;
+    text-align: left;
+}
+#tabMenu,
+#navigation,
+#contentWrapper,
+#footer {
+    background-color: #dc8; /* for modern browsers */
+}
+#tabMenu {
+    margin-bottom: 0px;
+    clear: both;
+    float: left;
+    padding-left: 50px;
+    height: 50px;
+}
+#content  {
+    border-style: solid;
+    border-width: thin;
+    margin: 15px;
+    min-height: 500px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-left: 100px;
+    
+    height: auto; /* for IE5.x and IE6 */
+}
+
+#content  {
+	background-color: #eec; /* for modern browsers */
+}
+#contentWrapper {
+    height: 80%;
+    height: auto;
+    width: 100%;
+    padding-bottom: 10px;
+    float: left; /* for IE5.x and IE6 */
+}
+#footer {
+    font-family: Verdana, "Lucida Grande", Arial, sans-serif;
+    padding-top: 2px;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    clear: both;
+    height: 200px;
+}
+#footerBanner img { vertical-align: middle }
+#footerBanner td {
+    padding-left: 10px;
+    font-size: small;
+    text-align: center;
+}
+#navigation,
+#content { margin-top: 5px }
+/*********************************************************
+ *  Table Styles
+ *********************************************************/
+table.noborder { border-style: none }
+div.scrollTableWrapper{
+ 
+  overflow-x: none;
+  overflow-y: scroll;
+  height: 23.45em;
+ 
+
+}
+table.adminTable {
+   	border-collapse: separate;
+   	width:100%;
+    border-spacing: 0px 2px;
+    
+}
+
+table.border {
+    border-style: solid;
+    border-color: #000000;
+}
+tr.primary { background-color: #adb2b0 }
+tr.primary:hover { background-color: #b2913b }
+tr.alt1 { background-color: #cccc99 }
+tr.alt1:hover { background-color: #b2913b; }
+th {
+    text-align: center;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    background-color: #006666;
+    color: #ffffff;
+    font-size: 0.75em;
+    font-family: verdana,arial,helvetica;
+    border-style: none;
+    font-weight: bold;
+}
+tr.primary td, tr.alt1 td  {
+    padding-bottom: 0.25em;
+    padding-top: 0.25em;
+    vertical-align: middle;
+}
+
+.noborder {
+    padding-right: 0em;
+    border-radius: 0px 0px 0px 0px;
+
+    background-color: #ffffff;
+}
+.separator {border-style: solid; border-width: thin; vertical-align: middle}
+
+.left {
+    padding-left: 0.5em;
+    border-radius: 10px 0px 0px 10px;
+}
+.right {
+    padding-right: 0.5em;
+    border-radius: 0px 10px 10px 0px;
+}
+.both {
+   	padding-left: 0.5em;
+   	padding-right: 0.5em;
+   	border-radius: 10px 10px 10px 10px;
+}
