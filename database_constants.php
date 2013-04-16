@@ -15,7 +15,7 @@ define("OBIB_REMOTE_USER", "circulation");
 define("OBIB_REMOTE_USER_PWD", "postalABWA");
 define("ROOT_ARCHIVES_PATH", "/Volumes/DATA/books/");
 
-//Greg Kearney
+//Greg Kearney April 2013
 /*********************************************************************************
  *  /\                                                                      /\
  *  ||                                                                      ||
