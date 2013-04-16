@@ -165,7 +165,7 @@ switch ($material){
 			$s = $row_ta['s'];
 			$author = $row_ta['author'];
 			$uid = $row_ta['bibid'];
-			$url = "http://www.guidedogswa.org/Library/openbiblio/opac/view.php?b=$uid";
+			$url = "http://www.galloplibrary.com/cals/opac/view.php?b=$uid";
 			$qrcode_path = $_SERVER['DOCUMENT_ROOT']."/qrcodes/$uid.png";
 
 			//QRcode::png("$url", "$qrcode_path", "L", 4, 2);
@@ -233,7 +233,7 @@ switch ($material){
 
 
 			if (eregi('^s|^D|^NZ|^G|^C|^M|^O',$s) and ($s != $previous_s)) {
-			$bookreport .= "<p class=\"pbreak\"><strong><a href=\"http://www.guidedogswa.org/Library/openbiblio/opac/view.php?b=$uid\">$title</a></strong>\n<br/><strong>$s</strong> $playtime<br/>\nby $author$narrator$summary</p>\n\n";
+			$bookreport .= "<p class=\"pbreak\"><strong><a href=\"http://www.galloplibrary.com/cals/opac/view.php?b=$uid\">$title</a></strong>\n<br/><strong>$s</strong> $playtime<br/>\nby $author$narrator$summary</p>\n\n";
 			
 			
 			switch ($colcount){

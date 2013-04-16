@@ -62,7 +62,7 @@
 
 <br/>
 
-<p align="left"><strong><a href="/Library/shelflist/index.php">Shelflist</a></strong> <?php echo date('d F Y'); ?><br/>
+<p align="left"><strong><a href="shelflist/index.php">Shelflist</a></strong> <?php echo date('d F Y'); ?><br/>
 This is a list of the talking books which have been produced into DAISY digital talking book format by the Association for the Blind of Western Australia from <?php echo $two_months ?> to <?php echo $now ?> these books can be accessed from the association or online.</p>
 </div>
 {/block}
