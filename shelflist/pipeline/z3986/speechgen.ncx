@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ncx
+  PUBLIC "-//NISO//DTD ncx 2005-1//EN" "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd">
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="en">
+	  <head>
+		    <meta content="D785C7D1-7876-47E8-85D6-D522447AC433" name="dtb:uid"/>
+		    <meta content="1" name="dtb:depth"/>
+		
+		    <meta content="TPB Narrator" name="dtb:generator"/>
+		    <meta content="0" name="dtb:totalPageCount"/>
+		    <meta content="0" name="dtb:maxPageNumber"/>
+	  </head>
+  
+	  <docTitle>
+	     <text>title</text>
+      <audio clipBegin="0:00:00" clipEnd="0:00:01.581" src="speechgen0001.mp3"/>
+   </docTitle>
+  
+	  <docAuthor>
+	     <text>author</text>
+      <audio clipBegin="0:00:01.581" clipEnd="0:00:03.732" src="speechgen0001.mp3"/>
+   </docAuthor>
+	
+	  <navMap id="navMap">
+      <navPoint class="h1" id="ncx-1" playOrder="1">
+         <navLabel>
+            <text>heading</text>
+            <audio clipBegin="0:00:00" clipEnd="0:00:03.565" src="speechgen0002.mp3"/>
+         </navLabel>
+         <content src="speechgen0002.smil#tcp3"/>
+      </navPoint>
+   </navMap>
+	
+	
+  
+</ncx>

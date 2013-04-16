@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?><!DOCTYPE dtbook PUBLIC "-//NISO//DTD dtbook 2005-2//EN" "http://www.daisy.org/z3986/2005/dtbook-2005-2.dtd"><?xml-stylesheet href='dtbook.2005.basic.css' type='text/css'?><dtbook xmlns="http://www.daisy.org/z3986/2005/dtbook/" xml:lang="en" version="2005-2">
+	<head>
+		<meta content="en" name="dc:Language" />
+		<meta content="D785C7D1-7876-47E8-85D6-D522447AC433" name="dtb:uid" />
+		<meta name="dc:Title" content="title" />
+		<meta name="dc:Creator" content="Romain" />
+		<meta name="dc:Publisher" content="DAISY Consortium" />
+		<meta name="dc:Date" content="2011-03-21" />
+	</head>
+	<book>
+		<frontmatter>
+			<doctitle id="dtb1" smilref="speechgen0001.smil#tcp1">title</doctitle>
+			<docauthor smilref="speechgen0001.smil#tcp2" id="dtb2">author</docauthor>
+		</frontmatter>
+		<bodymatter id="body">
+			<level1><!-- <p><pagenum id="p1" page="normal">1</pagenum></p> -->
+				<h1 smilref="speechgen0002.smil#tcp3" id="dtb3">heading</h1>
+				<p><sent id="dtb4" smilref="speechgen0002.smil#tcp4">This is a sentence. </sent><sent smilref="speechgen0002.smil#tcp5" id="dtb5">This is another sentence.</sent></p>
+			</level1><!-- <level1>
+				<p><pagenum id="p2" page="normal">2</pagenum></p>
+				<h1>Heading.</h1>
+				<p>This is an email address: rdeltour@gmail.com</p>
+				<p>This is a sentence with an initialism: SEA. Another one with an acronym: DAISY. Another one with an abbreviation e.g. this one or <abbr title="for instance">e.g.</abbr> another or <abbr>e.g.</abbr> another.</p>
+				<p>This is a note reference <noteref idref="#note1" class="endnote">1</noteref></p>
+				<p>Another paragraph.</p>
+				<note id="note1" class="endnote">
+					<p>This is a note.</p>
+				</note>
+			</level1> -->
+		</bodymatter>
+	</book>
+</dtbook>

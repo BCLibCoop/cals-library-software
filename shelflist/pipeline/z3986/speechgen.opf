@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE package
+  PUBLIC "+//ISBN 0-9673008-1-9//DTD OEB 1.2 Package//EN" "http://openebook.org/dtds/oeb-1.2/oebpkg12.dtd">
+<package xmlns="http://openebook.org/namespaces/oeb-package/1.0/" unique-identifier="uid">
+	  <metadata>
+	
+		    <dc-metadata xmlns:dc="http://purl.org/dc/elements/1.1/"
+                   xmlns:oebpackage="http://openebook.org/namespaces/oeb-package/1.0/">
+			      <dc:Format>ANSI/NISO Z39.86-2005</dc:Format>
+		       <dc:Date>2011-03-21</dc:Date>
+         <dc:Language>en</dc:Language>
+         <dc:Creator>Romain</dc:Creator>
+         <dc:Publisher>DAISY Consortium</dc:Publisher>
+         <dc:Title>title</dc:Title>
+         <dc:Identifier id="uid">D785C7D1-7876-47E8-85D6-D522447AC433</dc:Identifier>
+      </dc-metadata>
+	
+		    <x-metadata>
+			      <meta content="audioFullText" name="dtb:multimediaType"/>
+			      <meta content="DAISY Pipeline Narrator" name="dtb:narrator"/>
+		       <meta content="0:00:10.383" name="dtb:totalTime"/>
+         <meta content="audio,text" name="dtb:multimediaContent"/>
+      </x-metadata>
+	
+	  </metadata>
+	
+	  <manifest>
+	     <item href="speechgen0001.smil" id="smil-1" media-type="application/smil"/>
+      <item href="speechgen0002.smil" id="smil-2" media-type="application/smil"/>
+      <item href="tpbnarrator.res" id="resource" media-type="application/x-dtbresource+xml"/>
+      <item href="speechgen.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+      <item href="speechgen0002.mp3" id="opf-3" media-type="audio/mpeg"/>
+      <item href="speechgen0001.mp3" id="opf-4" media-type="audio/mpeg"/>
+      <item href="speechgen.opf" id="opf-5" media-type="text/xml"/>
+      <item href="test.xml" id="opf-6" media-type="application/x-dtbook+xml"/>
+      <item href="tpbnarrator_res.mp3" id="opf-7" media-type="audio/mpeg"/>
+      <item href="dtbook.2005.basic.css" id="opf-8" media-type="text/css"/>
+   </manifest>
+	
+	  <spine>
+	     <itemref idref="smil-1"/>
+      <itemref idref="smil-2"/>
+   </spine>
+
+</package>

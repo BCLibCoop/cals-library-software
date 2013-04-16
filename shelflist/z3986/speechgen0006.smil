@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE smil
+  PUBLIC "-//NISO//DTD dtbsmil 2005-2//EN" "http://www.daisy.org/z3986/2005/dtbsmil-2005-2.dtd">
+<smil xmlns="http://www.w3.org/2001/SMIL20/">
+	  <head>
+		    <meta content="auvpabw-20130415120004" name="dtb:uid"/>
+		    <meta content="TPB Narrator" name="dtb:generator"/>
+		    <meta content="3:22:03.794" name="dtb:totalElapsedTime"/>
+		
+	  </head>
+	  <body>
+		    <seq dur="0:06:53.946" fill="remove" id="mseq">
+		       <par id="tcp1137">
+            <text id="text1137" src="shelflist.xml#dtb1137"/>
+            <audio clipBegin="0:00:00" clipEnd="0:00:03.758" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1138">
+            <text id="text1138" src="shelflist.xml#dtb1138"/>
+            <audio clipBegin="0:00:03.758" clipEnd="0:00:18.822" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1139">
+            <text id="text1139" src="shelflist.xml#dtb1139"/>
+            <audio clipBegin="0:00:18.822" clipEnd="0:00:30.694" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1140">
+            <text id="text1140" src="shelflist.xml#dtb1140"/>
+            <audio clipBegin="0:00:30.694" clipEnd="0:00:33.769" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1141">
+            <text id="text1141" src="shelflist.xml#dtb1141"/>
+            <audio clipBegin="0:00:33.769" clipEnd="0:00:51.930" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1142">
+            <text id="text1142" src="shelflist.xml#dtb1142"/>
+            <audio clipBegin="0:00:51.930" clipEnd="0:00:57.164" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1143">
+            <text id="text1143" src="shelflist.xml#dtb1143"/>
+            <audio clipBegin="0:00:57.164" clipEnd="0:01:12.644" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1144">
+            <text id="text1144" src="shelflist.xml#dtb1144"/>
+            <audio clipBegin="0:01:12.644" clipEnd="0:01:26.908" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1145">
+            <text id="text1145" src="shelflist.xml#dtb1145"/>
+            <audio clipBegin="0:01:26.908" clipEnd="0:01:34.736" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1146">
+            <text id="text1146" src="shelflist.xml#dtb1146"/>
+            <audio clipBegin="0:01:34.736" clipEnd="0:01:44.404" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1147">
+            <text id="text1147" src="shelflist.xml#dtb1147"/>
+            <audio clipBegin="0:01:44.404" clipEnd="0:01:58.757" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1148">
+            <text id="text1148" src="shelflist.xml#dtb1148"/>
+            <audio clipBegin="0:01:58.757" clipEnd="0:02:00.085" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1149">
+            <text id="text1149" src="shelflist.xml#dtb1149"/>
+            <audio clipBegin="0:02:00.085" clipEnd="0:02:19.317" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1150">
+            <text id="text1150" src="shelflist.xml#dtb1150"/>
+            <audio clipBegin="0:02:19.317" clipEnd="0:02:27.512" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1151">
+            <text id="text1151" src="shelflist.xml#dtb1151"/>
+            <audio clipBegin="0:02:27.512" clipEnd="0:02:39.589" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1152">
+            <text id="text1152" src="shelflist.xml#dtb1152"/>
+            <audio clipBegin="0:02:39.589" clipEnd="0:02:58.180" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1153">
+            <text id="text1153" src="shelflist.xml#dtb1153"/>
+            <audio clipBegin="0:02:58.180" clipEnd="0:03:12.530" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1154">
+            <text id="text1154" src="shelflist.xml#dtb1154"/>
+            <audio clipBegin="0:03:12.530" clipEnd="0:03:23.388" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1155">
+            <text id="text1155" src="shelflist.xml#dtb1155"/>
+            <audio clipBegin="0:03:23.388" clipEnd="0:03:26.996" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1156">
+            <text id="text1156" src="shelflist.xml#dtb1156"/>
+            <audio clipBegin="0:03:26.996" clipEnd="0:03:33.396" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1157">
+            <text id="text1157" src="shelflist.xml#dtb1157"/>
+            <audio clipBegin="0:03:33.396" clipEnd="0:03:49.207" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1158">
+            <text id="text1158" src="shelflist.xml#dtb1158"/>
+            <audio clipBegin="0:03:49.207" clipEnd="0:03:55.510" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1159">
+            <text id="text1159" src="shelflist.xml#dtb1159"/>
+            <audio clipBegin="0:03:55.510" clipEnd="0:04:09.278" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1160">
+            <text id="text1160" src="shelflist.xml#dtb1160"/>
+            <audio clipBegin="0:04:09.278" clipEnd="0:04:14.474" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1161">
+            <text id="text1161" src="shelflist.xml#dtb1161"/>
+            <audio clipBegin="0:04:14.474" clipEnd="0:04:19.944" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1162">
+            <text id="text1162" src="shelflist.xml#dtb1162"/>
+            <audio clipBegin="0:04:19.944" clipEnd="0:04:41.318" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1163">
+            <text id="text1163" src="shelflist.xml#dtb1163"/>
+            <audio clipBegin="0:04:41.318" clipEnd="0:04:53.139" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1164">
+            <text id="text1164" src="shelflist.xml#dtb1164"/>
+            <audio clipBegin="0:04:53.139" clipEnd="0:04:59.877" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1165">
+            <text id="text1165" src="shelflist.xml#dtb1165"/>
+            <audio clipBegin="0:04:59.877" clipEnd="0:05:05.460" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1166">
+            <text id="text1166" src="shelflist.xml#dtb1166"/>
+            <audio clipBegin="0:05:05.460" clipEnd="0:05:11.488" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1167">
+            <text id="text1167" src="shelflist.xml#dtb1167"/>
+            <audio clipBegin="0:05:11.488" clipEnd="0:05:33.867" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1168">
+            <text id="text1168" src="shelflist.xml#dtb1168"/>
+            <audio clipBegin="0:05:33.867" clipEnd="0:05:49.500" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1169">
+            <text id="text1169" src="shelflist.xml#dtb1169"/>
+            <audio clipBegin="0:05:49.500" clipEnd="0:05:59.629" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1170">
+            <text id="text1170" src="shelflist.xml#dtb1170"/>
+            <audio clipBegin="0:05:59.629" clipEnd="0:06:18.124" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1171">
+            <text id="text1171" src="shelflist.xml#dtb1171"/>
+            <audio clipBegin="0:06:18.124" clipEnd="0:06:32.589" src="speechgen0006.mp3"/>
+         </par>
+         <par id="tcp1172">
+            <text id="text1172" src="shelflist.xml#dtb1172"/>
+            <audio clipBegin="0:06:32.589" clipEnd="0:06:53.946" src="speechgen0006.mp3"/>
+         </par>
+      </seq>
+	  </body>
+</smil>
