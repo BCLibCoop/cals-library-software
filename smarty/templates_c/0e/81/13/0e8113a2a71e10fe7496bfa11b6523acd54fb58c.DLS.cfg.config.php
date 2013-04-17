@@ -7,7 +7,7 @@
       array (
         'libraryName' => 'Canadian Accessible Library System<br/>Syst&egrave;me canadien de la biblioth&egrave;que accessible',
         'libraryDescription' => '',
-        'libraryImageUrl' => 'canada_flag.jpg',
+        'libraryImageUrl' => 'canada-maple-leaf.jpg',
         'libraryShowImageInFooter' => '1',
         'libraryHours' => 'M - F 9.00 am - 4.30 pm',
         'libraryPhone' => '(08) 9311 8202',

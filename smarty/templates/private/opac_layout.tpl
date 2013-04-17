@@ -10,7 +10,7 @@
 <meta http-equiv="content-type" content="text/html; charset={$charset}">
 <meta http-equiv="content-style-type" content="text/css" />
 <meta name="language" content="en" />
-<meta name="author" content="Kieren Eaton" />
+<meta name="author" content="Kieren Eaton, Greg Kearney" />
 <meta name="description" content="Digital Library Information Service">
 <!--
  <meta name="Description" content="Guide Dogs and other services for people who are vision impaired" />
@@ -19,6 +19,7 @@
 -->
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
+<link rel="shortcut icon" href="../images/favicon.ico" />
 <link rel="stylesheet" type="text/css" href="../css/opac.css" title="style" />
 <title>{block name="pageTitle"}{$smarty.config.libraryName}{/block}</title>
 {/block} {* end head block *}
