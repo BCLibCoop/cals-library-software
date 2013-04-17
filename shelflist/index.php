@@ -1,6 +1,6 @@
 <?php
 
-include "../openbiblio/database_constants.php";
+include "database_constants.php";
 
 date_default_timezone_set('Australia/Perth');
 $bmark = '';
@@ -13,7 +13,7 @@ $braillereport = '';
 //ini_set('display_errors', 1);
 //error_reporting(E_ERROR ^ E_WARNING);
 // Added by Greg Kearney needed to display QRcodes below
- include $_SERVER['DOCUMENT_ROOT']."/includes/phpqrcode/qrlib.php";
+// include $_SERVER['DOCUMENT_ROOT']."/includes/phpqrcode/qrlib.php";
 //End of QRcode display.
 $colcount = 1;
 $previous_s = '';
