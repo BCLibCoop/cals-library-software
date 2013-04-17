@@ -50,10 +50,10 @@
 		{block name="content"}{/block}
 		</div>
 		
-		
+	
 <div id="content">	
-	<h1 class="greenbar">Login</h1>
-	<p>Registered users of the library can use the button below to login to the system. Once logged in you will not be requested for your username or password to download copyrighted works.</p>
+	<h1 class="redbar">Login</h1>
+	<p>{$caLogin}</p>
 
 	<center>
 			{if $loginOutButton}<input type="button" class="button" value="{$loginOutButton.label}" onclick="self.location='{$loginOutButton.ref}'"><br/>{/if}

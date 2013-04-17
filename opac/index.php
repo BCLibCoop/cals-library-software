@@ -19,12 +19,18 @@
    $labels['sel_isbn']=$loc->getText("opac_isbn");
    $labels['sel_snum']=$loc->getText("opac_systemNumber");
    $labels['sel_all']=$loc->getText("opac_all");
-
+   
+   $phrases = array();
+   $phrases['caShelflist']=$loc->getText('opac_shelflist');
+   //d($loc);
+   
+   $smarty->assign('phrases',$phrases);
    $smarty->assign('labels',$labels);
    $smarty->assign('contentHeader',$loc->getText('opac_Header'));
    $smarty->assign('contentMsg',$loc->getText('opac_WelcomeMsg'));
    $smarty->assign('caTitle',$loc->getText('opac_ca_title'));
    $smarty->assign('caLogin',$loc->getText('opac_ca_login'));
+   //$smarty->assign('caShelflist',$loc->getText('opac_shelflist'));
 
    $smarty->display('opac/index.tpl');
    exit;

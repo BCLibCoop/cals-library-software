@@ -87,6 +87,11 @@ $trans["opac_view_entryInfoExtra"]       = "\$text = 'Additional Information';";
 //$trans["opac_view_copyLogin"]       = "\$text = 'Login to download';";
 //$trans["opac_view_copyLogin"]       = "\$text = 'Login to download';";
 
+
+
+
+
+
 #****************************************************************************
 #*  Translation text for page loginform.php
 #****************************************************************************
@@ -97,7 +102,11 @@ $trans["opac_login_loginButton"]           = "\$text = 'Login';";
 $trans["opac_login_invalidLogin"]           = "\$text = 'Invalid Username or Password';";
 
 
-         
+ if ($lang != 'fr')  {
+$trans["opac_shelflist"]	 = "\$text = 'This is a list of the talking books which have been produced into DAISY digital talking book format by CALS these books can be accessed from CALS or online.<p>Il s\'agit d\'une liste des livres parlants qui ont &eacute;t&eacute; produites en format de livre parl&eacute; num&eacute;rique DAISY par CALS ces livres peuvent &ecirc;tre accessibles &agrave; partir de CALS ou en ligne.';";
+} else {
+$trans["opac_shelflist"]	 = "\$text = 'Il s\'agit d\'une liste des livres parlants qui ont &eacute;t&eacute; produites en format de livre parl&eacute; num&eacute;rique DAISY par CALS ces livres peuvent &ecirc;tre accessibles &agrave; partir de CALS ou en ligne.<p>This is a list of the talking books which have been produced into DAISY digital talking book format by CALS these books can be accessed from CALS or online.';";
+}        
          
 if ($lang != 'fr') {
 $trans["opac_ca_title"]	 = "\$text = 'Canadian Accessible Library System<br/>Syst&egrave;me canadien de la biblioth&egrave;que accessible';";
@@ -110,5 +119,8 @@ $trans["opac_ca_login"]	 = "\$text = 'Registered users of the library can use th
 } else {
 $trans["opac_ca_login"]	 = "\$text = 'Les utilisateurs enregistr&eacute;s de la biblioth&egrave;que peut utiliser le bouton ci-dessous pour vous connecter au syst&egrave;me. Une fois connect&eacute;, vous ne serez pas demand&eacute; votre nom d\'utilisateur ou mot de passe pour t&eacute;l&eacute;charger des oeuvres prot&eacute;g&eacute;es.<p>Registered users of the library can use the button below to login to the system. Once logged in you will not be requested for your username or password to download copyrighted works.';";
 }
+
+
+
            
-       ?>
+?>
