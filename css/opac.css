@@ -636,3 +636,15 @@ width: 650px;
 {
 text-decoration: none;
 }
+
+.redbar
+{
+background-color: #d61919;
+color: #ffffff;
+  margin: 2px;
+  font-size: 18px;
+  font-family: verdana,arial,helvetica;
+  padding: 5px 5px 5px 5px;
+  font-weight: bold;
+  text-align: left;
+}
