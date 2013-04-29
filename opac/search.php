@@ -4,6 +4,7 @@
 	 */
 	$tab='opac';
 	require_once(str_replace('//','/',dirname(__FILE__).'/')."../shared/common.php");
+	require_once(__ROOT__."functions/stringFuncs.php");
 	require_once('loginCheck.php');
 
 	session_cache_limiter(null);
@@ -25,6 +26,7 @@
     #****************************************************************************
     #*  Function declaration only used on this page.
     #****************************************************************************
+/*
     function printResultPages(&$loc, $currPage, $pageCount, $sort) {
       if ($pageCount <= 1) {
         return false;
@@ -49,21 +51,7 @@
         echo "<a href=\"javascript:changePage(".($currPage+1).",'".$sort."')\">".$loc->getText("biblioSearchNext")."&raquo;</a> ";
       }
     }
-
-    #****************************************************************************
-    #*  Loading a few domain tables into associative arrays
-    #****************************************************************************
-    //$dmQ = new DmQuery();
-
-/*
-    $collectionDm = $dmQ->getAssoc("collection_dm");
-    $materialTypeDm = $dmQ->getAssoc("material_type_dm");
-    $materialImageFiles = $dmQ->getAssoc("material_type_dm", "image_file");
 */
-
-    #****************************************************************************
-    #*  Retrieving post vars and scrubbing the data
-    #****************************************************************************
 
     $currentPageNmbr = (isset($_GET["page"]))?(int)$_GET["page"]:1;
 
@@ -74,7 +62,7 @@
 
     $words=array();
     if(in_array($searchType, array(3)))
-        $words = explodeStr($words);
+        $words = explodeStr($searchText);
     else
         $words = explode(' ',$searchText);
 
@@ -82,10 +70,8 @@
     #*  Search database
     #****************************************************************************
     $searchQ = new OpacSearchQuery();
-    //$searchQ->setItemsPerPage(OBIB_ITEMS_PER_PAGE);
 
     $results = $searchQ->search($searchType,$words,$currentPageNmbr,$sortBy,true,$searchProd);
-    //dd($results);
 
     $labels=array();
     $labels['searchCrit']=$loc->getText("opac_criteria",array("crit"=>$searchText));
@@ -99,35 +85,7 @@
     $labels['back']=$loc->getText("opac_backToSearch");
 
     $smarty->assign('entries',$results);
-    //$smarty->assign('criteria',$searchText);
     $smarty->assign('labels',$labels);
     $smarty->display('opac/search.tpl');
 
     exit;
-
-  #**************************************************************************
-  #*  Show search results
-  #**************************************************************************
-
-/*
-  if ($tab == "opac") {
-    //set the refresh to return us to search in 10 seconds.
-    if ($searchQ->getRowCount() == 0) {
-    	$refresh = "<meta http-equiv=\"refresh\" content=\"10; URL=http://www.guidedogswa.org/library\">";
-    	}
-
-    require_once(str_replace('//','/',dirname(__FILE__).'/')."../shared/header_opac.php");
-  }
-*/
-
-  # Display no results message if no results returned from search.
-  $msg = 'some thing found';
-  if ($searchQ->getRowCount() == 0) {
-
-    $msg = $loc->getText("biblioSearchNoResults");
- }
-  	$smarty->assign('contentHeader',$loc->getText("biblioSearchResultTxt",array("items"=>$searchQ->getRowCount())));
-  	$smarty->assign('contentMsg',$msg);
-  	$smarty->display('opac/search.tpl');
-?>
-
