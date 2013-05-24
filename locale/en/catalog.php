@@ -66,8 +66,7 @@ $trans["catalogSearch_barHeaderAuthor"]              	= "\$text = 'Author';";
 $trans["catalogSearch_barHeaderSubject"]             	= "\$text = 'Subject';";
 $trans["catalogSearch_barHeaderSysNumber"]   			= "\$text='System No.';";
 $trans["catalogSearch_viewEntryDetails"]   			= "\$text='View Details';";
-
-$trans["catalogEntry_viewRestrictedPublicWarning"]   			= "\$text='Distribution of this title is restricted to patrons who are blind or disabled. You will be required to provide your username and password to download this title. If you have any questions please contact the <a href=\"http://www.abwa.asn.au/\">Association for the Blind of Western Australia</a> on 1800 658 388 or email: <a href=\"mailto:hello@guidedogswa.com.au\">hello@guidedogswa.com.au</a>';";
+$trans["catalogEntry_viewRestrictedPublicWarning"] = "\$text='Distribution of this title is restricted to patrons who have a vision impairment, or a physical or learning disability. You will be required to provide a username and password to download. If you have questions, please email <a href=\"mailto:nnels@libraries.coop\">nnels@libraries.coop</a>';";
 $trans["catalogEntry_viewRestrictedAdminWarning"]   			= "\$text='This title is restricted';";
 $trans["catalogEntry_viewAddCopyLabel"]   			= "\$text='Add a new copy';";
 $trans["catalogEntry_viewNoCopiesFound"]   			= "\$text='No copies on file';";

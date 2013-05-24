@@ -68,7 +68,7 @@ $trans["opac_criteria"]			 = "\$text='Search results for : %crit%';";
 $trans["opac_collection"]			 = "\$text='Collection';";
 $trans["opac_copyTypes"]			 = "\$text='Available Formats';";
 $trans["opac_restrictedMsg"]			 = "\$text='This title is protected by copyright, downloads are limited to the print disabled.';";
-$trans["opac_restrictedFullMsg"] = "\$text='Distribution of this title is restricted to patrons who are blind or disabled. You will be required to provide your username and password to download this title. If you have any questions please contact the <a href=\"http://www.abwa.asn.au/\">Association for the Blind of Western Australia</a> on 1800 658 388 or email: <a href=\"mailto:hello@guidedogswa.com.au\">hello@guidedogswa.com.au</a>';";
+$trans["opac_restrictedFullMsg"] = "\$text='Distribution of this title is restricted to patrons who have a vision impairment, or a physical or learning disability. You will be required to provide a username and password to download. If you have questions, please email <a href=\"mailto:nnels@libraries.coop\">nnels@libraries.coop</a>';";
 $trans["opac_requestProduction"]			 = "\$text='Request production of this title';";
 $trans["opac_backToSearch"]			 = "\$text='Back to Search';";
 
