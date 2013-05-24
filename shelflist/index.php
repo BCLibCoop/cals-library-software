@@ -2,7 +2,7 @@
 
 include "database_constants.php";
 
-date_default_timezone_set('Australia/Perth');
+date_default_timezone_set('Canada/Pacific');
 $bmark = '';
 $bookreport = '';
 $ctable = '';
@@ -436,54 +436,13 @@ h3 {page-break-before:always}
 <table border="0" width="100%">
 <tr><td align="left"><h1>Shelflist</h1><br/><strong><?php echo $now ?></strong></td><td align="right"><img src="logo_horizontal.jpg" alt="logo_horizontal" width="" height="100" /></td></td></tr>
 </table>
-<p>A publication of the Dr. Geoff Gallop Braille and Talking Book Library of the Association for the Blind of Western Australia </p>
+<p>A publication of the Canadian Accessible Library System.</p>
 <h2>New Digital Talking Books<br/>from <?php echo $two_months ?> to <?php echo $now ?></h2>
-<p>This is a list of the talking books which have been produced into DAISY digital talking book format or available in downloadable Braille format by the Association for the Blind of Western Australia from <?php echo $two_months ?> to <?php echo $now ?> these books can be accessed from the association or online at http://www.guidedogswa.org/ or by printing order form at the end of this list, checking the box each title and returning book order to us by post or fax at:<br/>
-<address>
-Library Service<br/>
-Association for the Blind of Western Australia<br/>
-P.O. Box 101<br/>
-Victoria Park, WA 6979<br/>
-AUSTRALIA<br/>
-Facsimile +61 08 9361 8696<br/>
-</address></p>
+<p>This is a list of the talking books which have been produced into DAISY digital talking book format or available in downloadable Braille format,  from <?php echo $two_months ?> to <?php echo $now ?></p>
 
-<div class="noprint">
-<form action="index.php" method="get">
-<input name="timeradio" type="radio" value="1week"/> One Week
-<input name="timeradio" type="radio" value="2week"/> Two Weeks
-<input name="timeradio" type="radio" value="1month"/> One Month
-<input name="timeradio" type="radio" value=""/> Two Months
-<input name="timeradio" type="radio" value="3month"/> Three Months
-<input name="timeradio" type="radio" value="4month"/> Four Months
-<input name="timeradio" type="radio" value="6month"/> Six Months
-<input type="submit" name="Reorder" value="Reorder"/>
-
-</form>
 <p><strong><a href="#tbc">Talking Books</a><br/>
 <a href="#bc">Braille Books</a></strong></p>
 </div>
-
-<div class="">
-<h3><a name="order"></a>Book Order</h3>
-<p>
-<table width="90%" align="left">
-<tr><td>Name</td><td>__________________</td><td rowspan="5"><strong>Return this forms to:</strong><br/>Library Services<br/>Association for the Blind of Western Australia<br/>P.O. Box 101<br/>Victoria Park, WA 6101<br/>AUSTRALIA</td></tr>
-<tr><td>Address</td><td>__________________</td></tr>
-<tr><td>City</td><td>__________________</td></tr>
-<tr><td>State</td><td>__________________</td></tr>
-<tr><td>Post Code</td> <td>__________________</td></tr>
-</table>
-</p>
-<p>
-<table width="90%" align="center">
-<?php  echo "$bookorder"; ?>
-</table>
-</p>
-<hr/>
-</div>
-
-
 
 <h3><a name="tbc"></a>Talking Books</h3>
 <div class="noprint"><?php  echo "$ctable"; ?></div>
