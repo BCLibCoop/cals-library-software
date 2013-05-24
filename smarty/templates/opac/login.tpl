@@ -21,13 +21,13 @@ then click the link to obtain the book.
 <table class="primary" style="width:40%">	
   <tbody>
   <tr>
-    <td class="primary" >{$labels.username}</td>
+    <td class="primary" >{$labels.username} [Enter your name]</td>
     <td class="primary">
       <input type="text" name="uname" size="20" maxlength="40" value="" >
     </td>
   </tr>
   <tr>
-    <td class="primary">{$labels.password}</td>
+    <td class="primary">{$labels.password} [Enter your password]</td>
     <td class="primary"><input type="password" name="pwd" size="20" maxlength="20" value="" ></td>
   </tr>
   </tbody>
