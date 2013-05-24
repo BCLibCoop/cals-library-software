@@ -11,8 +11,8 @@ class Smarty_DLS extends Smarty {
 
         parent::__construct();
 
-		$this->SetCaching(Smarty::CACHING_OFF);
-   		$this->SetUseSubDirs(true);
+	$this->SetCaching(Smarty::CACHING_OFF);
+	$this->SetUseSubDirs(true);
 
         $this->SetTemplateDir(__ROOT__.'smarty/templates');
         $this->SetCompileDir(__ROOT__.'smarty/templates_c');
@@ -20,6 +20,7 @@ class Smarty_DLS extends Smarty {
         $this->SetCacheDir(__ROOT__.'smarty/cache');
       	$this->addPluginsDir(__ROOT__.'smarty/plugins');
       	$this->addPluginsDir(__ROOT__.'libs/SmartyValidate/plugins');
+	$this->caching = 0;
 
       	if(ini_get('display_errors')==1)
 		{
