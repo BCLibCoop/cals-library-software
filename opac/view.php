@@ -70,6 +70,7 @@
 			$copy['size'] = round($size, $precision)." Mb";
 
 			// file time calculator
+			$pt = '';
 			if (isset($fieldData["306a"])) { $pt = $fieldData["306a"]->getFieldData();}
 			if (strlen($pt) >= 6)
 			{
