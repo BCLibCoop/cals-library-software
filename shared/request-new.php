@@ -16,8 +16,6 @@ require_once(str_replace('//','/',dirname(__FILE__).'/')."../classes/Biblio.php"
   $loc = new Localize(OBIB_LOCALE,"shared");
 
 
-
-
 $title = $_GET[title];
 $author = $_GET[author];
 $uri = $_GET[uri];
@@ -112,7 +110,7 @@ $email
 $phone";
 
 $from_mail_message = "
-Your request below has been sent to the ABWA in Perth, Western Australia.
+Your request below has been sent to the National Network of Equitable Library Servics (NNELS).
 TITLE: 	$book_title
 AUTHOR:	$book_author
 FORMATS: $format_list
@@ -129,8 +127,8 @@ $from_mail_subject = "Your book production request for $book_title";
 $to_headers = "From: $email" . "\r\n" .
     "Reply-To: $email" . "\r\n" .
     "X-Mailer: PHP/" . phpversion();
-$from_headers = "From: dtb@guidedogswa.com.au" . "\r\n" .
-    "Reply-To: dtb@guidedogswa.com.au" . "\r\n" .
+$from_headers = "From: NNELS@libraries.coop" . "\r\n" .
+    "Reply-To: NNELS@libraries.coop" . "\r\n" .
     "X-Mailer: PHP/" . phpversion();
 	
 
@@ -232,7 +230,7 @@ function returnLookup(formName,fieldName,val) {
            echo "<img align=\"middle\" src=\"".H(OBIB_LIBRARY_IMAGE_URL)."\" border=\"0\" height=\"60\" alt=\"Guide Dogs WA logo\"></td>";
          }
          if (!OBIB_LIBRARY_USE_IMAGE_ONLY) {
-           echo "<td width=\"100%\" class=\"title\" valign=\"top\"><strong> ".H(OBIB_LIBRARY_NAME)."</strong></td></tr><tr><td width=\"100%\" class=\"title\" valign=\"top\"><span style=\"font-size: 12pt;\">The Braille and Talking Book Library of the Association for the Blind of Western Australia</span></td></tr>";
+           echo "<td width=\"100%\" class=\"title\" valign=\"top\"><strong> ".H(OBIB_LIBRARY_NAME)."</strong></td></tr><tr><td width=\"100%\" class=\"title\" valign=\"top\"><span style=\"font-size: 12pt;\">Canadian Accessible Library System</span></td></tr>";
          }
        ?>
        </table>    </td>
@@ -301,10 +299,10 @@ function returnLookup(formName,fieldName,val) {
 
 
 
-<h1>Talking Book Production Request</h1>
+<h1>Production Request</h1>
 
 
-<p>Please fill out the form below and submit your request. We will look into producing the book and if produced  you will be notified when it is ready for download.</p>
+<p>Complete this form to submit your request. Our network can producing the book you will be notified when it is ready for download.</p>
 <?php echo $message; ?>
 <p><strong>Bold</strong> fields are required.</p>
 
@@ -333,8 +331,8 @@ function returnLookup(formName,fieldName,val) {
       <div class="optional">
 
       <label for="libpatronid" class="labelCheckbox">
-          <input type="checkbox" name="libpatron" id="libpatronid" class="inputCheckbox" value="1"  onclick="Hideme()" /> ABWA Library Patron</label>
-         <!--<small>Only ABWA library patrons with a print disability may request production of works held under copyright. Other should have their regional or national libraries for the blind place the request on their behalf.</small> -->
+          <input type="checkbox" name="libpatron" id="libpatronid" class="inputCheckbox" value="1"  onclick="Hideme()" />Library Patron</label>
+         <!--<small>Library patrons with a print disability may request production of works held under copyright. NNELS can request copies to produce in alternate format on their behalf.</small> -->
           </div>
       
       
@@ -356,16 +354,21 @@ function returnLookup(formName,fieldName,val) {
         <label for="state">State:</label><br/>
         
 <select name="state" id="state" class="selectOne">
-<option value="">Select a State/Province</option>
+<option value="">Select a Province/Territory</option>
 <option value="" disabled>---------------</option>
-<option value="WA"  selected="selected">WA - Western Australia</option>
-<option value="ACT">ACT - Australian Capital Territory</option>
-<option value="NSW">NSW - New South Wales</option>
-<option value="ACT">NT - Northern Territories</option>
-<option value="QLD">QLD - Queensland</option>
-<option value="SA">SA - South Australia</option>
-<option value="TAS">TAS - Tasmania</option>
-<option value="VIC">VIC - Victoria</option>
+<option value="AB">AB - Alberta</option>
+<option value="BC">BC - British Columbia</option>
+<option value="MB">MB - Manitoba</option>
+<option value="NB">NB - New Brunswick</option>
+<option value="NL">NL - Newfoundland and Labrador</option>
+<option value="NT">NT - Northwest Territories</option>
+<option value="NS">NS - Nova Scotia</option>
+<option value="NU">NU - Nunavut</option>
+<option value="ON">ON - Ontario</option>
+<option value="PE">PE - Prince Edward Island</option>
+<option value="QC">QC - Quebec</option>
+<option value="SK">SK - Saskatchewan</option>
+<option value="YT">YT - Yukon</option>
 <option value="" disabled>---------------</option>
 <option value="AL">AL - Alabama</option>
 <option value="AK">AK - Alaska</option>
@@ -426,20 +429,6 @@ function returnLookup(formName,fieldName,val) {
 <option value="AE">AE - Armed Forces Middle East</option>
 <option value="AP">AP - Armed Forces Pacific</option>
 <option value="" disabled>---------------</option>
-<option value="AB">AB - Alberta</option>
-<option value="BC">BC - British Columbia</option>
-<option value="MB">MB - Manitoba</option>
-<option value="NB">NB - New Brunswick</option>
-<option value="NL">NL - Newfoundland and Labrador</option>
-<option value="NT">NT - Northwest Territories</option>
-<option value="NS">NS - Nova Scotia</option>
-<option value="NU">NU - Nunavut</option>
-<option value="ON">ON - Ontario</option>
-<option value="PE">PE - Prince Edward Island</option>
-<option value="QC">QC - Quebec</option>
-<option value="SK">SK - Saskatchewan</option>
-<option value="YT">YT - Yukon</option>
-<option value="" disabled>---------------</option>
 <option value="AS">AS - American Samoa</option>
 <option value="FM">FM - Federated States of Micronesia</option>
 <option value="GU">GU - Guam</option>
@@ -465,11 +454,10 @@ function returnLookup(formName,fieldName,val) {
 <select name="country" id="country" class="selectOne">
 <option value="Select a Country">Select a Country</option>
 <option value="" disabled>---------------</option>
-
+<option value="Canada">CA - Canada</option>
 <option value="Australia" selected="selected">AU - Australia</option>
 <option value="New Zealand">NZ - New Zealand</option>
 <option value="United States">US - United States</option>
-<option value="Canada">CA - Canada</option>
 <option value="" disabled>---------------</option>
 <option value="Afghanistan">AF - Afghanistan</option>
 <option value="Albania">AL - Albania</option>
@@ -770,7 +758,7 @@ function returnLookup(formName,fieldName,val) {
       </div>
       <div class="optional">
       
-          <!--  <small>There is no charge for physical media delivery (CDs) to ABWA clients.</small> -->
+          <!--  <small>There is no charge for physical media delivery (CDs) to libraries.</small> -->
 
       
       <fieldset><legend>Formats Requested:</legend>

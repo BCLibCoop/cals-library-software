@@ -24,13 +24,13 @@ require_once(str_replace('//','/',dirname(__FILE__).'/')."../classes/Biblio.php"
 
 
 <h2>Audio on Demand</h2> 
-<p>We can provide you with public domain resources in a format to suit your needs. We can obtain digital audio content and electronic text items, from sources such as Librivox and Project Gutenberg Australia. These are converted into different formats and supplied to you. Downloadable audio files attract no charge but fees apply for the production and provision of physical formats (registered members of our Braille and Talking Book Library are exempt).</p>
+<p>We can provide you with resources in a format to suit your needs. We can obtain digital audio content and electronic text items, from sources such as Librivox and Project Gutenberg Australia. These are converted into different formats and supplied to you. Downloadable audio files attract no charge but fees apply for the production and provision of physical formats (registered members of our Braille and Talking Book Library are exempt).</p>
 
 <p>After conducting your search, items found will be listed. Many of them will probably not yet be available in an alternative format so, after choosing your item from the resulting list, simply press the Request Production link and complete the form.</p>
 
 <p>One option presented will be the ability to directly download the electronic audio file onto a disc or portable device. It you choose this option, you will be notified by email when it is available and will then have immediate access to the item, for which there will be no charge.<p>
 
-<p>Alternatively, you might prefer to receive the item on cassette, standard CD or MP3 file on disk. If this is the case, please complete the form as specified and the item will be produced for you by the Association's Braille and Talking Book Library. It will then be posted to you with an invoice for $19.99 (registered members of the Association’s library will not be invoiced).</p> 
+<p>Alternatively, you might prefer to receive standard CD or MP3 file on disk or device. If this is the case, please work with your local library to access your reading material effectively.</p> 
 
 
 <?php

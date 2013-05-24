@@ -36,48 +36,29 @@ require_once(str_replace('//','/',dirname(__FILE__).'/')."../classes/Biblio.php"
 <body>
 
 
-<h2>Braille and Talking Book Library</h2>
+<h2>Digital Library for People with a Print Disability</h2>
 
-<p>The Association's Dr. Geoff Gallop Braille and Talking Book Library provides a State-wide postal lending service of talking books in cassette format. It also has a Library Resource Centre where visitors may browse collections of: cassette and CD talking books; audio described videos; Braille books; multi - media books for children; toys and games and borrow items over the counter.</p> 
+<p>The Canadian Accessible Library System (CALS) is a digital public library of on-demand titles for alternate format materials.  Individuals with active library cards can <mailto:nnels@libraries.coop>contact nnels to register for the site. This site is a beta test with full release scheduled in Fall 2013.
+</p> 
 
-<p>This library is available to any client of the Association. If you are blind or have a vision impairment <!-- or have a print disability (dyslexia) --> and would like to enquire about your eligibility to access this service, please contact the Association for the Blind of Western Australia on (08) 9311 8202.</p>
+<p>This library is available to any person with a print disability: blind or other vision impairment, dyslexia, inability to hold a book. <a href="http://nationalnetwork.ca">National Network of Equitable Library Services(NNELS)</a> is an evolving network of library users, librarians, library associations, print producers, alternate format producers and others.
 
-<h2>Beyond Books, Beyond Barriers</h2>
-
-<a href="http://www.abwa.asn.au/">The Association for Blind of Western Australia</a> is engaged in a joint, long-term library project with the <a href="http://www.slwa.wa.gov.au/">State Library of Western Australia</a> called "Beyond Books, Beyond Barriers". This project is working towards giving access to online library resources, in audio format, to people with a print disability - even the broader community. 
-
-<p>As part of the project, this initial service provides access to works in the public domain where copyright has expired. The range of items in electronic text format includes many favourites and classics, which can now be transformed on demand, into audio format and made available to your library.</p> 
-
-<p>Using automated tools, the text is converted to high quality synthesised* speech. The finished product can be provided to you in MP3 DAISY format.</p>
-
-<p>This is an invaluable service for people who seek a particular book that does not currently exist in audio form.</p>
-
-<p>*While these texts are not read by a human voice, the synthetic speech is of an increasingly high standard and may be considered acceptable by the listener, particularly if it allows the prompt audio production of a work that currently exists only in text format.</p>
-
-<h2>Audio on Demand - requesting production</h2>
-
-<p>After conducting your search, items found will be listed. Most books have not yet been produced into alternative formats so, after choosing your item from the resulting list, simply press the <em>Request Production</em> link and complete the form.</p> 
-
-<p>One option presented will be the ability to directly download the electronic audio file onto a disc or portable device. It you choose this option, you will be notified by email when it is available and will then have immediate access to the item, for which there will be no charge.</p>
-
-<p>Alternatively, you might prefer to receive the item on cassette, standard CD or MP3 file on disk. If this is the case, please complete the form as specified and the product will be produced for you by the Association's Braille and Talking Book Library. It will then be posted to you with an invoice for $19.99. (Registered members of the Association's library will not be invoiced.)</p>
-
-<h2>Two collections</h2>
-<p>The Beyond Book, Beyond Barriers collection is divided into two parts. The first part is made up of works in the public domain and includes classic works out of copyright as well as the growing collection of public documents <!-- and oral histories held by the State Library of Western Australia -->. This collection is open to the public without restriction.</p>
-
-<p>The second part of the collection is comprised of copyrighted works produced by the Association for the Blind of Western Australia. Whilst access to these books via its library service is restricted to clients of the Association for the Blind, these books can be made more broadly available for eligible use. They may be lent to other libraries on inter-library loan or purchased by libraries and individuals. Eligible users are those with a print disability, which includes people with a vision impairment or people who cannot read print for another reason such as dyslexia.</p>
-
-<p>In all cases we comply with the <a href="http://www.ag.gov.au/www/agd/agd.nsf/page/Copyright">Copyright Act (1968)</a> as amended.</p>
+<p>The project, provides access to library books through a network of exchange as well as open library content.  This is a digital audio on demand project for inter-library loan of alternate format materials.
 
 
-<h2>DAISY formats</h2>
-<p>When you request an item, one choice of format is DAISY. This is a specialised MP3 form, developed particularly for people who are blind or vision impaired. A DAISY item selected from this service can be played on any DAISY playback software and hardware devices but can also be loaded onto all digital music players such as an Apple iPod, or played in disc format on MP3 enabled compact disk players.</p>
+<h2>Audio on Demand</h2>
+
+<p>After conducting your search, items found will be listed. Some books have not yet been produced into alternative formats so, if after choosing an item from the list does not include download click the <em>Request Production</em> link and complete the form.</p> 
+
+<p>For produced titles you can download directly to use on a portable device or on disc.  The library contains DAISY format items which bundle MP3 files, a braille-ready file and etext.</p>
 
 
 <h3>Free DAISY playback software</h3>
-<p>Below are links to free DAISY digital talking book playback software. Commercial software is also available as well as hardware based playback devices for more information contact the Association for the Blind of Western Australia at (08) 9311 8202.</p>
+
+<p>Below are links to free DAISY digital talking book playback software. Commercial software is also available as well as hardware based playback devices for more information contact your local library .</p>
 <ul>
 	<li>Cross platform - <a href="http://code.google.com/p/emerson-reader/downloads/list">Emerson</a> is cross platform (Windows, Macintosh and Linux) DAISY and EPub reader software.</li>
+        <li>iOS - <a href="https://itunes.apple.com/au/app/daisyworm/id383777731?mt=8">DAISY Worm</a>
 	<li>Windows - <a href="http://amis.sourceforge.net/">Adaptive Multimedia Information System</a> (AMIS)</li>
 	<li>Macintosh - <a href="http://www.cucat.org/projects/olearia/">Olearia</a> MacOS 10.5 or better required.</li>
 </ul>

@@ -38,7 +38,7 @@ require_once(str_replace('//','/',dirname(__FILE__).'/')."../classes/Biblio.php"
 
 <h2>Introduction</h2>
 
-<p>Thank you for your willingness to help the Association for the Blind of Western Australia in producing digital talking books. This page provides instructions for processing the text files you will receive from us into word processor formats used to produce digital talking books.</p> 
+<p>Thank you for your working on the production of alternate format materials for <a href="http://nationalnetwork.ca">NNELS</a>. This page provides instructions for processing the text files you will receive from us into word processor formats used to produce digital talking books.</p> 
 
 <p>To perform this work you will need a computer and either Microsoft Word, an version or OpenOffice which can be downloaded for free from <a href="www.openoffice.org">OpenOffice.org</a> There are versions of Open Office which will run on Windows, Macintosh and Linux computers.</p>
 
@@ -46,7 +46,7 @@ require_once(str_replace('//','/',dirname(__FILE__).'/')."../classes/Biblio.php"
 
 When a request for production of a book is made from our system we retrieve a text file of that work and perform some basic check on format and layout of the document. We will then forward to you the text file for further processing in your word processor.
 
-<p>Open the text file in your word processor set to standard A4 paper size. You do not need to be concerned about fonts or font size of the document.</p>
+<p>Open the text file in your word processor set to standard paper size. You do not need to be concerned about fonts or font size of the document.</p>
 
 <p>Your primary task is to identify major and minor sections of the work and mark the start of those as headings. For example if the work has 10 chapters each starting with the chapter title then that chapter title would be given the style <q>Heading 1</q>. If there are sub sections of the work they would be given a style of <q>Heading 2</q>. as a rule you should not have more than three levels of headings deep.</p>
 

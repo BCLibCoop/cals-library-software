@@ -19,7 +19,7 @@ require_once(str_replace('//','/',dirname(__FILE__).'/')."../classes/Biblio.php"
   
 ?>
 
-<h2>Becoming a Registered Library Member</h2>
-<p>In order to be a member of our Braille and Talking Book Library, you need to be a current Association client. If you are not a client, please call our Duty Officer on 9311 8202 or 1800 847 466 outside the metropolitan area. If you a current client of the Association please print, complete and sign the Application Form Library Service and direct it to - TEIS Customer Service Officer, Association for the Blind of WA Inc. PO Box 101 Victoria Park WA 6979.</p>
+<h2>Register for the Beta access</h2>
+<p>To register for CALS contact us at <mailto:nnels@libraries.coop>nnels email.  This is for early adopters and our beta site.  In coming months your access will be automatic based on a public library card.</p>
 
 

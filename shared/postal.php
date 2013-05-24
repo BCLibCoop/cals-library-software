@@ -26,6 +26,6 @@ require_once(str_replace('//','/',dirname(__FILE__).'/')."../classes/Biblio.php"
 
 
 
-<h2>Postal Lending Service</h2>
+<h2>Local Lending</h2>
 
-<p>This is our long-standing and established service, which involves the postage of cassette talking books to borrowers anywhere in Western Australia. You need to be a registered library member and supply your own cassette player. Our cassette books are packaged in sturdy mailing containers that fit through the slot of a letterbox and require no addressing. Library borrowers are not required to pay postage; these costs are covered by the Australian Government.</p> 
+<p>Registered library members can access copies of materials from CALS on disc at their local library.</p> 
