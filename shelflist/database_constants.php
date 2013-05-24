@@ -13,7 +13,8 @@ define("OBIB_USERNAME", "ob_user");
 define("OBIB_PWD",      ",abwa!");
 define("OBIB_REMOTE_USER", "circulation");
 define("OBIB_REMOTE_USER_PWD", "postalABWA");
-define("ROOT_ARCHIVES_PATH", "/Volumes/DATA/books/");
+#define("ROOT_ARCHIVES_PATH", "/Volumes/DATA/books/");
+define("ROOT_ARCHIVES_PATH", "/mnt/usb/books/");
 
 /*********************************************************************************
  *  /\                                                                      /\
