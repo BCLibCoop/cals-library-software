@@ -17,7 +17,7 @@ print(file_exists($lf)."\n");
 $command = $s3v2->getCommand('GetObject', array(
   'Bucket' => 'nnels',
   'Key' => 'Books/'.$f,
-  'ResponseContentDisposition' => 'attachment; filename="data.txt"'
+  'ResponseContentDisposition' => 'attachment; filename="data.txt"',
 ));
 $signedUrl = $command->createPresignedUrl('+10 minutes');
 print($signedUrl);

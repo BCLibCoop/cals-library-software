@@ -72,17 +72,28 @@
   				$basename = pathinfo($origFile,PATHINFO_BASENAME);
 
 
-				header('Content-Description: File Transfer');
-				header('Content-Type: application/octet-stream');
-				header("Accept-Ranges: bytes");
-				header('Content-Disposition: attachment; filename="'.$basename.'";');
-				header('Content-Transfer-Encoding: binary');
-				header('Content-Length: '.$filesize );
-				header('Cache-Control: must-revalidate, post-check=0, pre-check=1');
-				#header('X-Sendfile: '.$downloadPath.$symFile);
-				unset($_SESSION['_user']['returnPage']);
-				$fp = fopen($origFile, 'r');
-				fpassthru($fp);
+				#header('Content-Description: File Transfer');
+				#header('Content-Type: application/octet-stream');
+				#header("Accept-Ranges: bytes");
+				#header('Content-Disposition: attachment; filename="'.$basename.'";');
+				#header('Content-Transfer-Encoding: binary');
+				#header('Content-Length: '.$filesize );
+				#header('Cache-Control: must-revalidate, post-check=0, pre-check=1');
+				##header('X-Sendfile: '.$downloadPath.$symFile);
+				#unset($_SESSION['_user']['returnPage']);
+				#$fp = fopen($origFile, 'r');
+				#fpassthru($fp);
+				$bucket =  $_CONFIG['aws_s3']['bucket'];
+				$prefix =  $_CONFIG['aws_s3']['bucket'];
+				$command = $s3v2->getCommand('GetObject', array(
+				  'Key' => os_path_join($prefix, $origFile),
+				  'Bucket' => $bucket,
+				  'ResponseCacheControl' => 'must-revalidate, post-check=0, pre-check=1',
+				  'ResponseContentDisposition' => 'attachment; filename="'.$basename.'";',
+				  'ResponseContentType' => 'application/octet-stream',
+				));
+				$signedUrl = $command->createPresignedUrl('+30 minutes');
+				header('Location: '.$signedUrl);
 
 			}
 	}
