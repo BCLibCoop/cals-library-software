@@ -23,7 +23,7 @@ $author = $_GET[author];
 $uri = $_GET[uri];
 $uri = $uri . "&tab=opac";
 
-$tomail = "nnels@bc.libraries.coop";
+$tomail = "nnels@libraries.coop";
 
 
 //Collect the fields

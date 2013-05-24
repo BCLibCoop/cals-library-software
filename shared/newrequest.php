@@ -125,8 +125,8 @@ $from_mail_subject = "Your book production request for $title $sysNum";
 $to_headers = "From: $email" . "\r\n" .
     "Reply-To: $email" . "\r\n" .
     "X-Mailer: PHP/" . phpversion();
-$from_headers = "From: nnels@bc.libraries.coop" . "\r\n" .
-    "Reply-To: nnels@bc.libraries.coop" . "\r\n" .
+$from_headers = "From: nnels@libraries.coop" . "\r\n" .
+    "Reply-To: nnels@libraries.coop" . "\r\n" .
     "X-Mailer: PHP/" . phpversion();
 	
 

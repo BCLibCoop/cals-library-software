@@ -12,7 +12,7 @@ $table_name = "t_librequests";
 $connection = @mysql_connect("localhost","root","cucat") or die("Couldn't Connect.");
 $db = @mysql_select_db($db_name, $connection) or die("Couldn't select database.");
 
-$tomail = "nnels@bc.libraries.coop";
+$tomail = "nnels@libraries.coop";
 
 
 
