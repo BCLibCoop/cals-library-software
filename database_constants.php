@@ -27,6 +27,8 @@ defined("ROOT_ARCHIVES_PATH") || define("ROOT_ARCHIVES_PATH", "/mnt/usb/books/")
  */
 
 # New stuff
+global $_CONFIG;
+if(!isset($_CONFIG)) {
 $_CONFIG = array(
 	'aws_s3' => array(
 		'key' => 'CENSORED',
@@ -37,4 +39,5 @@ $_CONFIG = array(
 		'prefix' => 'Books',
 	),
 );
+}
 ?>
