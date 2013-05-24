@@ -3,7 +3,7 @@
 <?php
 ini_set('display_errors', 1);
 echo "START\n";
-date_default_timezone_set ( "Australia/Perth" );
+date_default_timezone_set ( "UTC" );
 
 
 include "database_constants.php";
@@ -106,7 +106,7 @@ switch ($material){
 			$title = stripslashes($row_ta['title']);
 			$s = $row_ta['s'];
 			$author = $row_ta['author'];
-			$author = eregi_replace("& ", "and ", $author);
+			$author = @eregi_replace("& ", "and ", $author);
 			$author = str_ireplace("&", "and", $author);
 			$uid = $row_ta['bibid'];
 			//$url = "http://www.guidedogswa.org/library/openbiblio/shared/biblio_view.php?bibid=$uid&tab=opac";
@@ -155,8 +155,8 @@ switch ($material){
 				$summary = $row_sum['summary'];
 
 				//$summary = htmlentities($row_sum['summary'],ENT_QUOTES,"UTF-8");
-				$summary = eregi_replace("�", "'", $summary);
-				$summary = eregi_replace("& ", "and ", $summary);
+				$summary = @eregi_replace("�", "'", $summary);
+				$summary = @eregi_replace("& ", "and ", $summary);
 				$summary = str_ireplace("&", "and", $summary);
 		}
 
@@ -171,7 +171,7 @@ switch ($material){
 			$sqlresults_nar = mysql_query($nar,$db) or die ("Error in sql statement $nar <p>" . mysql_error());
 			while ($row_nar = mysql_fetch_array($sqlresults_nar)) {
 				$n = htmlentities($row_nar['n']);
-				if (eregi("Apple",$n)){$narrator = "<br/>Narrated by $n\n<br/>";} else {$narrator = "<br/>";}
+				if (@eregi("Apple",$n)){$narrator = "<br/>Narrated by $n\n<br/>";} else {$narrator = "<br/>";}
 
 		}
 
@@ -180,7 +180,7 @@ switch ($material){
 
 			$title = str_replace ( "& ", "and ", $title);
 
-			if (eregi('^s|^D|^NZ|^G|^C|^M|^O|^BE',$s) and ($s != $previous_s)) {
+			if (@eregi('^s|^D|^NZ|^G|^C|^M|^O|^BE',$s) and ($s != $previous_s)) {
 			$bookreport .= "<p class=\"pbreak\"><strong>$title</strong>\n<br/><strong>$s</strong> $playtime<br/>\nby $author$narrator$summary</p>\n\n";
 
 
@@ -247,24 +247,20 @@ $bookreport
 </dtbook>
 EOD;
 
-$myFile = "/Library/WebServer/Documents/Library/shelflist/shelflist.xml";
+$myFile = "shelflist/tmp/input/shelflist.xml";
 $fh = fopen($myFile, 'w') or die("can't open file $myFile");
 fwrite($fh, $shelflist);
 fclose($fh);
 
+`cd shelflist`;
 
-
-`cd /Library/WebServer/Documents/Library/shelflist`;
-
-$pipeline_cmd = "/Library/WebServer/Documents/Library/shelflist/pipeline/pipeline.sh  /Library/WebServer/Documents/Library/shelflist/pipeline/scripts/create_distribute/dtb/Narrator-DtbookToDaisy.taskScript --input=/Library/WebServer/Documents/Library/shelflist/shelflist.xml --outputPath=/Library/WebServer/Documents/Library/shelflist/";
+$pipeline_cmd = "shelflist/pipeline/pipeline.sh  shelflist/pipeline/scripts/create_distribute/dtb/Narrator-DtbookToDaisy.taskScript --input=shelflist/tmp/input/shelflist.xml --outputPath=shelflist/tmp/output/";
 $r = `$pipeline_cmd`;
 
-
-
-`mv daisy202 Shelflist`;
-`/usr/bin/zip -r Shelflist Shelflist`;
-`rm -Rf Shelflist`;
-`chown gkearney:staff Shelflist.zip`;
-`cp Shelflist.zip /Volumes/DATA/books/autoadd/`;
+#`mv daisy202 Shelflist`;
+#`/usr/bin/zip -r Shelflist Shelflist`;
+#`rm -Rf Shelflist`;
+#`chown gkearney:staff Shelflist.zip`;
+#`cp Shelflist.zip /Volumes/DATA/books/autoadd/`;
 
 ?>
