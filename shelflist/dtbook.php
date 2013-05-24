@@ -224,8 +224,8 @@ $shelflist = <<<EOD
 		<level1>
 				<h1>About this digital talking book</h1>
 				<p>Navigation of this digital talking book is by book type at the first navigation level.</p>
-				<p>This digital talking book was produced by the Canadian Accessible Library System</p>
-				<p>To support the production of this and other digital talking books or for more information please contact by email at: nnels@libraries.coop</p>
+				<p>Digital talking books produced by National Network of Equitable Library Services, the Association for the Blind of Western Australia</p>
+				<p>To support the production of this and other digital talking books or for more information please contact <a href="mailto:nnels@libraries.coop">nnels@libraries.coop</a></p>
 		</level1>
 		</frontmatter>	
 			
