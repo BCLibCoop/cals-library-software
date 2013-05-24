@@ -10,7 +10,7 @@
 <meta http-equiv="content-type" content="text/html; charset={$charset}">
 <meta http-equiv="content-style-type" content="text/css" />
 <meta name="language" content="en" />
-<meta name="author" content="Kieren Eaton, Greg Kearney" />
+<meta name="author" content="Kieren Eaton, Greg Kearney, Robin H. Johnson, Maryann Kempthorne" />
 <meta name="description" content="Digital Library Information Service">
 <!--
  <meta name="Description" content="Guide Dogs and other services for people who are vision impaired" />
