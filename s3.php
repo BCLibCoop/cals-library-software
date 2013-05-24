@@ -1,7 +1,7 @@
 <?php
 // Copyright 3 Robin H. Johnson <robbat2@sitka.bclibraries.ca>
-require 'AWSSDKforPHP/aws.phar';
-require 'database_constants.php';
+require_once 'AWSSDKforPHP/aws.phar';
+require_once 'database_constants.php';
 use Aws\S3\S3Client;
 $config = $_CONFIG['aws_s3'];
 global $s3v2;
