@@ -1,4 +1,2 @@
 How to install Amazon AWS SDK:
 # pear -D auto_discover=1 install pear.amazonwebservices.com/sdk
-
-Hello world!
