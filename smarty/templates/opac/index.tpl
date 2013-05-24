@@ -62,7 +62,7 @@
 
 <br/>
 
-<p align="left"><strong><a href="/cals/shelflist/index.php">Shelflist</a></strong><br/>{$phrases['caShelflist']}</p>
+<p align="left"><strong><a href="/shelflist/index.php">Shelflist</a></strong><br/>{$phrases['caShelflist']}</p>
 </div>
 {/block}
 {block name='endScripts' append}
