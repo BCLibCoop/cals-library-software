@@ -5,6 +5,7 @@
 	$tab='opac';
   	require_once(str_replace('//','/',dirname(__FILE__).'/')."../shared/common.php");
   	require_once('loginCheck.php');
+	require_once '../s3.php';
 
  	#****************************************************************************
  	#*  Checking for get vars.  Go back to form if none found.
@@ -57,19 +58,20 @@
   	foreach($copyRes as $copyData)
   	{
   		$copy = array();
-		if(file_exists(ROOT_ARCHIVES_PATH.$copyData->getFilePath()))
+		$filepath = ROOT_ARCHIVES_PATH.$copyData->getFilePath();
+		if(file_exists($filepath))
  		{
  			// file size calculator
 
  			$copy['content']=$contentTypes[$copyData->getContentId()];
-			$filesize = filesize(ROOT_ARCHIVES_PATH.$copyData->getFilePath());
-        	$size = (($filesize / 1024) / 1024);
+			$filesize = filesize($filepath);
+			$size = (($filesize / 1024) / 1024);
 			$precision = 2;
 			$copy['size'] = round($size, $precision)." Mb";
 
 			// file time calculator
-	 	    if (isset($fieldData["306a"])) { $pt = $fieldData["306a"]->getFieldData();}
-        	if (strlen($pt) >= 6)
+			if (isset($fieldData["306a"])) { $pt = $fieldData["306a"]->getFieldData();}
+			if (strlen($pt) >= 6)
 			{
 				$hours = substr($pt, 0 , 2);
 				$minutes = 	substr($pt, 2 , 2);
@@ -78,9 +80,7 @@
 	 		$copy['id']=$copyData->getCopyId();
 	 		$copy['downloadButtonUrl']=($isGuest)?"login.php?ret=view&b=".$bibid:"download.php?c=".$copyData->getCopyId();
 	 		$copy['downloadButtonText']=($isGuest)?$loc->getText("opac_view_copyLogin"):$loc->getText("opac_view_copyDownload").' '.$copy['content'];
-	 	}
- 		else
- 		{
+	 	} else {
  			$copy['error']=$loc->getText("opac_view_copyNotFound");
  		}
 

@@ -14,6 +14,7 @@
 
  
 require_once(str_replace('//','/',dirname(__FILE__).'/').'../classes/ezQuery.php');
+require_once('../s3.php');
 
 class CatalogIntegrity extends ezQuery
 {

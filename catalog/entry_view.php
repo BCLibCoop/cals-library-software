@@ -4,6 +4,7 @@
  */
   	$tab = "catalog";
   	require_once(str_replace('//','/',dirname(__FILE__).'/')."../shared/common.php");
+	require_once '../s3.php';
 
   	if(!(checkPassedIn(array('bid'),$_GET)))
 	{
@@ -140,7 +141,7 @@
   		$copiesExtraInfo = array();
   		while(list(,$aCopy) = each($copies))
   		{
-  			$filepath = ROOT_ARCHIVES_PATH.$aCopy->getFilePath();
+			$filepath = ROOT_ARCHIVES_PATH.$aCopy->getFilePath();
   			if(!file_exists($filepath))
   			{
    				$size = 0;

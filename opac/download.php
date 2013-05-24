@@ -17,6 +17,7 @@
   	require_once(__ROOT__."classes/BiblioCopyQuery.php");
   	require_once(__ROOT__."classes/Biblio.php");
   	require_once(__ROOT__."classes/BiblioQuery.php");
+	require_once '../s3.php';
 
 
  	#****************************************************************************
@@ -51,37 +52,38 @@
   	{
   		   	$origFile = ROOT_ARCHIVES_PATH;
   			$origFile .= $copy->getFilePath();
-  			$symFile = md5($origFile);
-  			$symFile = md5($symFile.$copy->getFilePath());
-  			$downloadPath = '/tmp/dls';
-  			if((!file_exists($downloadPath))){
-  				mkdir($downloadPath,0777,true);
-  			}
-  			$downloadPath .='/';
 
   			if ((file_exists($origFile)))
   			{
+  				#$symFile = md5($origFile);
+  				#$symFile = md5($symFile.$copy->getFilePath());
+  				#$downloadPath = '/tmp/dls';
+				#$downloadPath .='/';
+  				#if((!file_exists($downloadPath))){
+  				#	mkdir($downloadPath,0777,true);
+  				#}
 
-  				if((!file_exists($downloadPath.$symFile)))
-  				{
-  					symlink($origFile,$downloadPath.$symFile);
-  				}
+  				#if((!file_exists($downloadPath.$symFile)))
+  				#{
+				#	symlink($origFile,$downloadPath.$symFile);
+  				#}
 
   				$filesize = filesize($origFile);
   				$basename = pathinfo($origFile,PATHINFO_BASENAME);
 
 
-  				header('Content-Description: File Transfer');
-    	 		header('Content-Type: application/octet-stream');
-    	 		header("Accept-Ranges: bytes");
-    	 		header('Content-Disposition: attachment; filename="'.$basename.'";');
-    	 		header('Content-Transfer-Encoding: binary');
-    			header('Content-Length: '.$filesize );
-    			header('Cache-Control: must-revalidate, post-check=0, pre-check=1');
-    			header('X-Sendfile: '.$downloadPath.$symFile);
+				header('Content-Description: File Transfer');
+				header('Content-Type: application/octet-stream');
+				header("Accept-Ranges: bytes");
+				header('Content-Disposition: attachment; filename="'.$basename.'";');
+				header('Content-Transfer-Encoding: binary');
+				header('Content-Length: '.$filesize );
+				header('Cache-Control: must-revalidate, post-check=0, pre-check=1');
+				#header('X-Sendfile: '.$downloadPath.$symFile);
+				unset($_SESSION['_user']['returnPage']);
+				$fp = fopen($origFile, 'r');
+				fpassthru($fp);
 
-    			unset($_SESSION['_user']['returnPage']);
-
-  			}
+			}
 	}
 ?>
