@@ -1,11 +1,11 @@
 <?php
 
+require 'database_constants.php';
 $pubdate = date('r');
 
-$db_name = "DB_library";
 $table_name = "biblio";
-$connection = @mysql_connect("localhost","root","cucat") or die("Couldn't Connect.");
-$db = @mysql_select_db($db_name, $connection) or die("Couldn't select database.");
+$connection = @mysql_connect(OBIB_HOST, OBIB_USERNAME, OBIB_PWD) or die("Couldn't Connect.");
+$db = @mysql_select_db(OBIB_DATABASE, $connection) or die("Couldn't select database.");
 
 
 
