@@ -224,8 +224,8 @@ $shelflist = <<<EOD
 		<level1>
 				<h1>About this digital talking book</h1>
 				<p>Navigation of this digital talking book is by book type at the first navigation level.</p>
-				<p>This digital talking book was produced by the Association for the Blind of Western Australia, at Perth Australia, March 2011. Computer-generated voices courtesy of Apple Inc.</p>
-				<p>To support the production of this and other digital talking books or for more information please contact the Association for the Blind of Western Australia at: +61 (08) 9311 8202 or by email at: dtb@guidedogswa.com.au</p>
+				<p>Digital talking books produced by National Network of Equitable Library Services, the Association for the Blind of Western Australia</p>
+				<p>To support the production of this and other digital talking books or for more information please contact <a href="mailto:nnels@libraries.coop">nnels@libraries.coop</a></p>
 		</level1>
 		</frontmatter>	
 			
@@ -233,8 +233,7 @@ $shelflist = <<<EOD
 	<level1>
 	<h1>$shelf_title</h1>		
 		
-	<p>A publication of the Dr. Geoff Gallop Braille and Talking Book Library of the Association for the Blind of Western Australia </p>
-<p>New Digital Talking Books from $two_months to $now. This is a list of the talking books which have been produced into DAISY digital talking book format or available in downloadable Braille format by the Association for the Blind of Western Australia from $two_months  to $now these books can be accessed from the association or online at http://www.guidedogswa.org/</p>
+	<p>List of the talking books which have been produced into DAISY digital talking book format or downloadable braille</p>
 
 $bookreport
 </level1>
