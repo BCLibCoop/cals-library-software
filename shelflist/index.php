@@ -434,7 +434,7 @@ h3 {page-break-before:always}
 <body>
 
 <table border="0" width="100%">
-<tr><td align="left"><h1>Shelflist</h1><br/><strong><?php echo $now ?></strong></td><td align="right"><img src="logo_horizontal.jpg" alt="logo_horizontal" width="" height="100" /></td></td></tr>
+<tr><td align="left"><h1>Shelflist</h1><br/><strong><?php echo $now ?></strong></td><td align="right"><img src="../images/calslogoquick.jpg" alt="logo_horizontal" width="" height="100" /></td></td></tr>
 </table>
 <p>A publication of the Canadian Accessible Library System.</p>
 <h2>New Digital Talking Books<br/>from <?php echo $two_months ?> to <?php echo $now ?></h2>
