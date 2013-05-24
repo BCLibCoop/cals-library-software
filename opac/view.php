@@ -150,36 +150,3 @@ FIELDS:
   	$smarty->assign('restricted',$entry->getIsRestricted());
   	$smarty->display('opac/view.tpl');
   	exit;
-
-
-
-//! ---------------------------------------------------------
-
-/*
-<span>
-	<?php
-		// QR Code for the link to the page
-		$theURL = "http://cals.libraries.coop".$_SERVER['REQUEST_URI'];
-      	QRcode::png("$theURL", "$qrcode_path", "L", 4, 2);
-      	QRtools::buildCache();
-		echo '<img  alt="QRcode barcode for this URL. Use a QRcode reader on this image." src="/tmp/test.png?rand='.rand(1,1000).'"/>';
-
-	?>
-</span>
-<!--This table added by Greg Kearney Jan 2010 for getting feedback on books -->
-<table >
-	<tr>
-<?php
-	$emailautor = (isset($biblioFlds["100a"]))?H($biblioFlds["100a"]->getFieldData()):'';
-	$emailtitle = (isset($biblioFlds["245a"]))?H($biblioFlds["245a"]->getFieldData()):'';
-?>
-    	<td colspan="2"><a href="mailto:dtb@guidedogswa.com.au?subject=Problems found in: <?php echo $emailtitle ?>&body=Please outline the issues you have found for <?php echo $emailtitle ?> by <?php echo $emailautor ?> below:">Report problems with <?php echo $emailtitle ?></a>
-      	</td>
-	</tr>
-	<tr><td><p></p></td></tr>
-    <tr><td><a href="/cgi-bin/obMARC.pl?<?php echo $bibid; ?>">Download MARC record</a> for this title</td></tr>
-</table>
-<!-- End of added table -->
-</div>
-
-*/
