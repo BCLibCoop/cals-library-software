@@ -133,7 +133,8 @@ FIELDS:
  	$labels['entryInfoGeneral'] = $loc->getText("opac_view_entryInfo");
 	$labels['entryInfoExtra'] = $loc->getText("opac_view_entryInfoExtra");
 
-	$url = "http://www.guidedogswa.org".$_SERVER['REQUEST_URI'];
+	# FIXME
+	$url = "http://cals.libraries.coop".$_SERVER['REQUEST_URI'];
     $code = QRcode::pngData($url, "L", 4, 2);
     if($code!==false)
     	$smarty->assign('qrcode',base64_encode($code));
@@ -158,7 +159,7 @@ FIELDS:
 <span>
 	<?php
 		// QR Code for the link to the page
-		$theURL = "http://www.guidedogswa.org".$_SERVER['REQUEST_URI'];
+		$theURL = "http://cals.libraries.coop".$_SERVER['REQUEST_URI'];
       	QRcode::png("$theURL", "$qrcode_path", "L", 4, 2);
       	QRtools::buildCache();
 		echo '<img  alt="QRcode barcode for this URL. Use a QRcode reader on this image." src="/tmp/test.png?rand='.rand(1,1000).'"/>';

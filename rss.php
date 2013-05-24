@@ -27,7 +27,7 @@ $items .= "
 <item>
     <title>$title $title_remainder</title>
     <pubDate>$pubdate</pubDate>
-    <link>http://www.guidedogswa.org$link</link>
+    <link>http://cals.libraries.coop$link</link>
     <description>$desc</description>
 </item>
 
@@ -45,9 +45,9 @@ header("Content-Type: application/xml; charset=ISO-8859-1");
 <?php echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"; ?>
 <rss version="2.0">
 <channel>
-  <title>ABWA Library New DAISY books</title>
-  <link>http://www.guidedogswa.org/</link>
-  <description>Keeping you up to day on the laster DAISY digital talking books from the Association for the Blind of Western Australia.</description>
+  <title>NNELS Library New DAISY books</title>
+  <link>http://cals.libraries.coop/</link>
+  <description>Keeping you up to day on the latest DAISY digital talking books from NNELS.</description>
   <pubDate><?php echo $pubdate; ?></pubDate>
   <?php echo $items; ?>
 </channel>

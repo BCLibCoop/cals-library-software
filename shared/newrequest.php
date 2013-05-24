@@ -105,7 +105,7 @@ if ($ipod) {$format_list = $format_list . "IPod Audiobook, ";}
 $to_mail_message = "
 TITLE: 	$title $sysNum
 AUTHOR:	$author
-URL:	http://www.guidedogswa.org$uri&marctest=Y
+URL:	http://cals.libraries.coop$uri&marctest=Y
 FORMATS: $format_list
 
 $gname $lname
@@ -117,18 +117,8 @@ $phone";
 echo $to_mail_message;
 
 $from_mail_message = "
-Your request below has been sent to the ABWA Library in Perth, Western Australia.
-TITLE: 	$title $sysNum
-AUTHOR:	$author
-URL:	http://www.guidedogswa.org$uri&marctest=Y
-FORMATS: $format_list
-
-$gname $lname
-$address1
-$city, $state $postal
-$county
-$email
-$phone";
+Your request below has been sent to the National Network of Equitable Library Servics (NNELS).
+".$to_mail_message;
 
 $to_mail_subject = "Book production request for $title $sysNum";
 $from_mail_subject = "Your book production request for $title $sysNum";

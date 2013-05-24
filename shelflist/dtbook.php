@@ -109,7 +109,6 @@ switch ($material){
 			$author = @eregi_replace("& ", "and ", $author);
 			$author = str_ireplace("&", "and", $author);
 			$uid = $row_ta['bibid'];
-			//$url = "http://www.guidedogswa.org/library/openbiblio/shared/biblio_view.php?bibid=$uid&tab=opac";
 			$qrcode_path = $_SERVER['DOCUMENT_ROOT']."/qrcodes/$uid.png";
 
 			//QRcode::png("$url", "$qrcode_path", "L", 4, 2);

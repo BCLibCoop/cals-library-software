@@ -55,7 +55,7 @@ body {visibility:hidden;}
 <h1 class='print'>Download Library Instructions</h1>
 <p class='print'>Thank you for using the digital talking book library of the Association for the Blind of Western Australia. These instructions will guide you in downloading books from our service.</p>
 
-<p class='print'>The library server is located at <strong>www.guidedogswa.org/library</strong> when you reach this page you will note that there are a number of search options including by title, author and subject. There are also options to search by collection, subject headings and by the type of book.</p>
+<p class='print'>The library server is located at <strong>cals.libraries.coop</strong> when you reach this page you will note that there are a number of search options including by title, author and subject. There are also options to search by collection, subject headings and by the type of book.</p>
 
 <p class='print'>You will only be asked for a user name and password when downloading a book that is protected by copyright. Your username and password are given below:</p>
 

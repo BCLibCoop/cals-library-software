@@ -121,8 +121,8 @@ $to_headers = "From: $email" . "\r\n" .
 $from_headers = "From: nnels@bc.libraries.coop" . "\r\n" .
     "Reply-To: nnels@bc.libraries.coop" . "\r\n" .
     "X-Mailer: PHP/" . phpversion();
-	
-# FIXME: This is broken. $tomail is NOT set anywhere.
+
+# $tomail is set in config.inc
 mail ($tomail, $to_mail_subject, $to_mail_message, $to_headers);
 mail ($email, $from_mail_subject, $from_mail_message, $from_headers);
 

@@ -23,7 +23,7 @@ $author = $_GET[author];
 $uri = $_GET[uri];
 $uri = $uri . "&tab=opac";
 
-$tomail = "dtb@guidedogswa.com.au, gkearney@gmail.com";
+$tomail = "nnels@bc.libraries.coop";
 
 
 //Collect the fields
@@ -115,25 +115,13 @@ $country
 $email";
 
 $from_mail_message = "
-Your request below has been sent to the ABWA in Perth, Western Australia.
-
-TITLE: 	$title
-AUTHOR:	$author
-URL:	$uri
-FORMATS: $format_list
-
-$libraryname
-$gname $lname
-$address1
-$address2
-$city, $state $postal
-$county
-$email";
+Your request below has been sent to the National Network of Equitable Library Servics (NNELS).
+".$to_mail_message;
 
 $to_mail_subject = "Library book production request for $title";
 $from_mail_subject = "Your book production request for $title";
 	
-
+# $tomail is set in config.inc
 mail ($tomail,$to_mail_subject,$to_mail_message);
 mail ($email,$from_mail_subject,$from_mail_message);
 
