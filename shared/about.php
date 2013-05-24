@@ -38,7 +38,7 @@ require_once(str_replace('//','/',dirname(__FILE__).'/')."../classes/Biblio.php"
 
 <h2>Digital Library for People with a Print Disability</h2>
 
-<p>The Canadian Accessible Library System (CALS) is a digital public library of on-demand titles for alternate format materials.  Individuals with active library cards can <mailto:nnels@libraries.coop>contact nnels to register for the site. This site is a beta test with full release scheduled in Fall 2013.
+<p>The Canadian Accessible Library System (CALS) is a digital public library of on-demand titles for alternate format materials.  Individuals with active library cards can <a href="mailto:nnels@bc.libraries.coop">contact nnels</a> to register for the site. This site is a beta test with full release scheduled in Fall 2013.
 </p> 
 
 <p>This library is available to any person with a print disability: blind or other vision impairment, dyslexia, inability to hold a book. <a href="http://nationalnetwork.ca">National Network of Equitable Library Services(NNELS)</a> is an evolving network of library users, librarians, library associations, print producers, alternate format producers and others.

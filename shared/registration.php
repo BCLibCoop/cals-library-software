@@ -20,6 +20,6 @@ require_once(str_replace('//','/',dirname(__FILE__).'/')."../classes/Biblio.php"
 ?>
 
 <h2>Register for the Beta access</h2>
-<p>To register for CALS contact us at <mailto:nnels@libraries.coop>nnels email.  This is for early adopters and our beta site.  In coming months your access will be automatic based on a public library card.</p>
+<p>To register for CALS contact us at <a href="mailto:nnels@bc.libraries.coop">NNELS email</a>.  This is for early adopters and our beta site.  In coming months your access will be automatic based on a public library card.</p>
 
 

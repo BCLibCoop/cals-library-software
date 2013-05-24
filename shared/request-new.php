@@ -57,7 +57,7 @@ if ($_POST['submit']) {
 	if ($book_title) {
 	
 
-	
+	# FIXME: SQL injection security	
 	$sql = "INSERT INTO t_main SET
 	last_name='$lname',
 	given_name='$gname',
@@ -111,29 +111,20 @@ $phone";
 
 $from_mail_message = "
 Your request below has been sent to the National Network of Equitable Library Servics (NNELS).
-TITLE: 	$book_title
-AUTHOR:	$book_author
-FORMATS: $format_list
-
-$gname $lname
-$address1
-$city, $state $postal
-$county
-$email
-$phone";
+".$to_mail_message;
 
 $to_mail_subject = "Book production request for $book_title";
 $from_mail_subject = "Your book production request for $book_title";
 $to_headers = "From: $email" . "\r\n" .
     "Reply-To: $email" . "\r\n" .
     "X-Mailer: PHP/" . phpversion();
-$from_headers = "From: NNELS@libraries.coop" . "\r\n" .
-    "Reply-To: NNELS@libraries.coop" . "\r\n" .
+$from_headers = "From: nnels@bc.libraries.coop" . "\r\n" .
+    "Reply-To: nnels@bc.libraries.coop" . "\r\n" .
     "X-Mailer: PHP/" . phpversion();
 	
-
-mail ($tomail,$to_mail_subject,$to_mail_message,$to_headers);
-mail ($email,$from_mail_subject,$from_mail_message,$from_headers);
+# FIXME: This is broken. $tomail is NOT set anywhere.
+mail ($tomail, $to_mail_subject, $to_mail_message, $to_headers);
+mail ($email, $from_mail_subject, $from_mail_message, $from_headers);
 
 $host  = $_SERVER['HTTP_HOST'];
 $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
