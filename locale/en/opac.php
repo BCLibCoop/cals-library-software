@@ -49,7 +49,7 @@ If you do not find the title you are searching for please tell us so that we may
 $trans["opac_Header"]        = "\$text='Online Public Access Catalog (OPAC)';";
 
 $welcome_en = "Welcome to the Canadian Accessible Library System, a service provided by The BC Libraries Cooperative with the support of the Provincial and Territorial Libraries Council of Canada. Please use the form below to search for accessible titles from our holdings. Titles are protected by copyright will require that you have a username and password to access. To register, please email <a href='mailto:nnels@libraries.coop'>nnels@libraries.coop</a></p>";
-$welcome_fr = "<p>Bienvenue sur le syst&egrave;me de biblioth&egrave;que canadienne accessible un service des biblioth&egrave;ques provinciales du Canada. S\'il vous pla&icirc;t utiliser le formulaire ci-dessous pour rechercher des titres accessibles de nos exploitations. S\'il vous pla&icirc;t noter que le titre prot&eacute;g&eacute; par le droit d\'auteur, il faudra que vous avez un nom d\'utilisateur et mot de passe sur ce syst&egrave;me.";
+$welcome_fr = "<p>Bienvenue sur le syst&egrave;me de biblioth&egrave;que canadienne accessible un service des biblioth&egrave;ques provinciales du Canada. S'il vous pla&icirc;t utiliser le formulaire ci-dessous pour rechercher des titres accessibles de nos exploitations. S'il vous pla&icirc;t noter que le titre prot&eacute;g&eacute; par le droit d'auteur, il faudra que vous avez un nom d'utilisateur et mot de passe sur ce syst&egrave;me.";
 if ($lang != 'fr') {
 $trans["opac_WelcomeMsg"]    = '$text="'.$welcome_en.$welcome_fr.'";';
 } else {
