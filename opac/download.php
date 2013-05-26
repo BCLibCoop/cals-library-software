@@ -23,7 +23,7 @@
  	#****************************************************************************
   	#*  Retrieving POST var
   	#****************************************************************************
-  	$copyid = $_GET['c'];
+  	$copyid = (int)$_GET['c'];
 
   	// get the bibid
   	$copyQ = new BiblioCopyQuery();
@@ -84,15 +84,39 @@
 				#$fp = fopen($origFile, 'r');
 				#fpassthru($fp);
 				$bucket =  $_CONFIG['aws_s3']['bucket'];
-				$prefix =  $_CONFIG['aws_s3']['bucket'];
+				$prefix =  $_CONFIG['aws_s3']['prefix'];
+				$expiry_time = '+30 minutes';
+				#$key =  os_path_join($prefix, $origFile);
+				$old_key =  $copy->getFilePath();
+				$old_key =  os_path_join($bucket, $prefix, $old_key);
+				if(isset($_SESSION['_user'])) {
+					$uid = $_SESSION['_user']['id'];
+				} else {
+					$uid = 'guest';
+				}
+				$hash_input = sprintf('user=%s,bib=%d,copy=%d,ts=%d', $uid, $bibid, $copyid, time());
+				$tmp_key =  sprintf('downloads/%d/%s/%s', strtotime($expiry_time), md5($hash_input), $basename);
+				#header('X-HashInput: '.$hash_input."\n");
+				#header('X-OldKey: '.$old_key."\n");
+				#header('X-TmpKey: '.$tmp_key."\n");
+				# We know the object already exists, so we don't need to check for 404 NoSuchKey
+				$s3v2->copyObject(array(
+				  'CopySource' => $old_key,
+				  'Key' => $tmp_key,
+				  'Bucket' => $bucket,
+				  'Expires' => $expiry_time,
+				  'StorageClass' => 'REDUCED_REDUNDANCY',
+				));
 				$command = $s3v2->getCommand('GetObject', array(
-				  'Key' => os_path_join($prefix, $origFile),
+				  'Key' => $tmp_key,
 				  'Bucket' => $bucket,
 				  'ResponseCacheControl' => 'must-revalidate, post-check=0, pre-check=1',
 				  'ResponseContentDisposition' => 'attachment; filename="'.$basename.'";',
 				  'ResponseContentType' => 'application/octet-stream',
 				));
-				$signedUrl = $command->createPresignedUrl('+30 minutes');
+				#print("signed\n");
+				$signedUrl = $command->createPresignedUrl($expiry_time);
+				#print('Location: '.$signedUrl."\n");
 				header('Location: '.$signedUrl);
 
 			}
