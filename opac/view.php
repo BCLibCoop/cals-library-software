@@ -79,8 +79,9 @@
 				$copy['playTime'] = ($minutes == '00')?"$hours hours":"$hours hours $minutes minutes";
 			}
 	 		$copy['id']=$copyData->getCopyId();
-	 		$copy['downloadButtonUrl']=($isGuest)?"login.php?ret=view&b=".$bibid:"download.php?c=".$copyData->getCopyId();
-	 		$copy['downloadButtonText']=($isGuest)?$loc->getText("opac_view_copyLogin"):$loc->getText("opac_view_copyDownload").' '.$copy['content'];
+			$downloadValid = ($isGuest===false) || !$entry->getIsRestricted();
+	 		$copy['downloadButtonUrl']=(!$downloadValid)?"login.php?ret=view&b=".$bibid:"download.php?c=".$copyData->getCopyId();
+	 		$copy['downloadButtonText']=(!$downloadValid)?$loc->getText("opac_view_copyLogin"):$loc->getText("opac_view_copyDownload").' '.$copy['content'];
 	 	} else {
  			$copy['error']=$loc->getText("opac_view_copyNotFound");
  		}
