@@ -36,6 +36,7 @@
  	$bibid = (int)$_GET['b'];
  	$bibQ = new BiblioQuery();
  	$entry = $bibQ->getEntry($bibid);
+	# FIXME: This should really tell them WHY they cannot select the book.
  	if($entry === false)
  	{
 	 	header("Location: index.php");
