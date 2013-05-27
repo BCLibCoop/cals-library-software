@@ -89,9 +89,12 @@ class OpacSearchQuery extends ezQuery {
     $orderBy = ($sortBy=='t')?"ORDER BY b.`title` ":"ORDER BY b.`author` ";
 
     $criteria = '';
-    foreach($words as $idx=>$aWord)
-    {
-	    $criteria .= $this->mkSQL("JOIN (SELECT si.`bibid` FROM `search_index` si JOIN `wordlist` wl ON si.`wordid`=wl.`wordid` AND (wl.`word` like '%q%%') WHERE si.`searchid`=%N) si%N on  si%N.bibid =b.bibid ",$aWord,$type,$idx,$idx);
+    $where = '';
+    if($type != 0) {
+      $where = $this->mkSQL("WHERE si.`searchid`=%N", $atype);
+    }
+    foreach($words as $idx=>$aWord) {
+            $criteria .= $this->mkSQL("JOIN (SELECT si.`bibid` FROM `search_index` si JOIN `wordlist` wl ON si.`wordid`=wl.`wordid` AND (wl.`word` like '%q%%') $where) si%N on  si%N.bibid =b.bibid ", $aWord, $idx, $idx);
     }
 
     $sql=$sqlPrefix.$criteria.$sqlSuffix.$orderBy;
