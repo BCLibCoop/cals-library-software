@@ -103,7 +103,7 @@
 <script type="text/javascript" src="{$APP_ROOT}/javascript/jquery-1.6.2.min.js"></script>
 <script type="text/javascript" src="{$APP_ROOT}/javascript/jquery.easing.1.3.js"></script>
 <script type="text/javascript" src="{$APP_ROOT}/javascript/jquery.coda-slider.js"></script>
-<script type="text/javascript" src="{$APP_ROOT}/javascript/AJAXagent.js"></script>
+<script type="text/javascript" src="{$APP_ROOT}/javascript/AJAXAgent.js"></script>
 <script type="text/javascript" src="{$APP_ROOT}/javascript/innershiv.js"></script>
 <script type="text/javascript" src="{$APP_ROOT}/javascript/tableFuncs.js"></script>
 <script type="text/javascript">
