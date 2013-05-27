@@ -67,7 +67,7 @@ class MARC
 
 	
 	// !-- Private functions
-	private function _tagsFromRecordData(&$recData)
+	private static function _tagsFromRecordData(&$recData)
 	{
 		$dataStart = (int)substr($recData,12,5); // get the offset where the actual data starts
 		$leader = substr($recData,0,$dataStart); // the leader is everything before the actual data
@@ -76,29 +76,33 @@ class MARC
 		$tagList = $allTags = array();
 		while(($tagOffset+12) < $dataStart)
 		{
-			$tagList[] = array("tag"=>substr($leader,$tagOffset,3), // tag
-							"len"=>(int)substr($leader,$tagOffset+3,4), // total length of all fields 
-							"off"=>(int)substr($leader,$tagOffset+7,5) // start poition within the record excluding the leader length
-							);
+			$tagList[] = array(
+				"tag"=>substr($leader,$tagOffset,3), // tag
+				"len"=>(int)substr($leader,$tagOffset+3,4), // total length of all fields 
+				"off"=>(int)substr($leader,$tagOffset+7,5), // start poition within the record excluding the leader length
+				);
 			$tagOffset += 12;		
 		}
 		
 		// process the fields of each tag
 		while (list(,$aTag) = each($tagList))
 		{
-			if ((((int)$aTag["tag"]) >= 900)  ) continue; // ignore tags reserved for local use 
-			$fieldsData	= substr($recData,$dataStart+$aTag["off"],$aTag["len"]);
-			$fields = self::_fieldsFromData($aTag["tag"],$fieldsData);
+			$tag = $aTag["tag"];
+			$len= $aTag["len"];
+			$off = $aTag["off"];
+			if ((((int)$tag) >= 900)  ) continue; // ignore tags reserved for local use 
+			$fieldsData	= substr($recData, $dataStart+$off, $len);
+			$fields = self::_fieldsFromData($tag, $fieldsData);
 			if (empty($fields)) continue;
 			 
-			$allTags[$aTag["tag"]] = $fields;
+			$allTags[$tag] = $fields;
 				
 		}
 		
 		return $allTags;
 	}
 	
-	private function _fieldsFromData($aTag,&$dataSeg)
+	private static function _fieldsFromData($aTag, &$dataSeg)
 	{
 		$fields = $fld = array();
 		$fieldsData = explode("\37",$dataSeg); // split the fields for this tag
@@ -118,7 +122,7 @@ class MARC
 			    else 
 			    {
 			    	// control fields have no Indicator or Subfield codes 
-			        $fld["data"] = (($aTag["tag"] == "008")?str_replace(" ","|",$fldData):$fldData);
+			        $fld["data"] = (($aTag == "008")?str_replace(" ","|",$fldData):$fldData);
 	            	$fields[] = $fld;
 			    }
 			    continue;

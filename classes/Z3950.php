@@ -51,7 +51,7 @@ class Z3950
         		$cclQry .= "($key=$searchTerms)";
         		$first = false;
         	}
-        	if (!yaz_ccl_parse($conns[$idx], $cclQry, &$rpnQuery)){continue;}
+        	if (!yaz_ccl_parse($conns[$idx], $cclQry, $rpnQuery)){continue;}
         	yaz_search($conns[$idx], "rpn", $rpnQuery["rpn"]);
 		}
 		yaz_wait(); // connect to the servers
