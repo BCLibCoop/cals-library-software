@@ -91,7 +91,7 @@ class OpacSearchQuery extends ezQuery {
     $criteria = '';
     $where = '';
     if($type != 0) {
-      $where = $this->mkSQL("WHERE si.`searchid`=%N", $atype);
+      $where = $this->mkSQL("WHERE si.`searchid`=%N", $type);
     }
     foreach($words as $idx=>$aWord) {
             $criteria .= $this->mkSQL("JOIN (SELECT si.`bibid` FROM `search_index` si JOIN `wordlist` wl ON si.`wordid`=wl.`wordid` AND (wl.`word` like '%q%%') $where) si%N on  si%N.bibid =b.bibid ", $aWord, $idx, $idx);
