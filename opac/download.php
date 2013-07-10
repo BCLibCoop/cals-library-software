@@ -106,10 +106,12 @@
 				  'Bucket' => $bucket,
 				  'Expires' => $expiry_time,
 				  'StorageClass' => 'REDUCED_REDUNDANCY',
+				  'PathStyle' => true,
 				));
 				$command = $s3v2->getCommand('GetObject', array(
 				  'Key' => $tmp_key,
 				  'Bucket' => $bucket,
+				  'PathStyle' => true,
 				  'ResponseCacheControl' => 'must-revalidate, post-check=0, pre-check=1',
 				  'ResponseContentDisposition' => 'attachment; filename="'.$basename.'";',
 				  'ResponseContentType' => 'application/octet-stream',

@@ -1,10 +1,20 @@
 <?php
+$params = array("PathStyle" => true);
+stream_context_set_default(array('s3'=>$params));
+#stream_context_get_default(array('s3'=>$params));
+var_dump(stream_context_get_options(stream_context_get_default()));
 require 's3.php';
+var_dump(stream_context_get_options(stream_context_get_default()));
 try {
 $objInfo = s3_object_head('popular/emma/emma.xmlx');
 } catch(Aws\S3\Exception\NoSuchKeyException $e) {
 //var_dump($e);
 }
+
+#$params = array("PathStyle" => true);
+#stream_context_set_default(array('s3'=>$params));
+
+#exit;
 
 global $_CONFIG;
 $bucket = $_CONFIG['aws_s3']['bucket'];
@@ -34,6 +44,7 @@ $command = $s3v2->copyObject(array(
   'Bucket' => $bucket,
   'Expires' => $expiry_time,
   'StorageClass' => 'REDUCED_REDUNDANCY',
+  'PathStyle' => true,
 ));
 } catch(Aws\S3\Exception\NoSuchKeyException $e) {
 printf("%s\n",$e->getResponse());
@@ -43,6 +54,7 @@ $command = $s3v2->getCommand('GetObject', array(
   'Bucket' => $bucket,
   'Key' => $tmp_key,
   'ResponseContentDisposition' => 'attachment; filename="data.txt"',
+  'PathStyle' => true,
 ));
 $signedUrl = $command->createPresignedUrl($expiry_time);
 print($signedUrl);
@@ -50,4 +62,5 @@ print($signedUrl);
 #$obj = s3_object_get('popular/emma/emma.xml');
 #print_r($objInfo['data:protected']);
 #echo $obj['Body'];
+
 ?>
