@@ -55,38 +55,13 @@
 
   			if ((file_exists($origFile)))
   			{
-  				#$symFile = md5($origFile);
-  				#$symFile = md5($symFile.$copy->getFilePath());
-  				#$downloadPath = '/tmp/dls';
-				#$downloadPath .='/';
-  				#if((!file_exists($downloadPath))){
-  				#	mkdir($downloadPath,0777,true);
-  				#}
-
-  				#if((!file_exists($downloadPath.$symFile)))
-  				#{
-				#	symlink($origFile,$downloadPath.$symFile);
-  				#}
 
   				$filesize = filesize($origFile);
   				$basename = pathinfo($origFile,PATHINFO_BASENAME);
 
-
-				#header('Content-Description: File Transfer');
-				#header('Content-Type: application/octet-stream');
-				#header("Accept-Ranges: bytes");
-				#header('Content-Disposition: attachment; filename="'.$basename.'";');
-				#header('Content-Transfer-Encoding: binary');
-				#header('Content-Length: '.$filesize );
-				#header('Cache-Control: must-revalidate, post-check=0, pre-check=1');
-				##header('X-Sendfile: '.$downloadPath.$symFile);
-				#unset($_SESSION['_user']['returnPage']);
-				#$fp = fopen($origFile, 'r');
-				#fpassthru($fp);
 				$bucket =  $_CONFIG['aws_s3']['bucket'];
 				$prefix =  $_CONFIG['aws_s3']['prefix'];
 				$expiry_time = '+30 minutes';
-				#$key =  os_path_join($prefix, $origFile);
 				$old_key =  $copy->getFilePath();
 				$old_key =  os_path_join($bucket, $prefix, $old_key);
 				if(isset($_SESSION['_user'])) {
@@ -95,11 +70,15 @@
 					$uid = 'guest';
 				}
 				$hash_input = sprintf('user=%s,bib=%d,copy=%d,ts=%d', $uid, $bibid, $copyid, time());
+				# The hash is so that users can't just guess the URL.
 				$tmp_key =  sprintf('downloads/%d/%s/%s', strtotime($expiry_time), md5($hash_input), $basename);
+				# For debug only:
 				#header('X-HashInput: '.$hash_input."\n");
 				#header('X-OldKey: '.$old_key."\n");
 				#header('X-TmpKey: '.$tmp_key."\n");
 				# We know the object already exists, so we don't need to check for 404 NoSuchKey
+				
+				# S3 calls start here:
 				$s3v2->copyObject(array(
 				  'CopySource' => $old_key,
 				  'Key' => $tmp_key,
@@ -118,6 +97,8 @@
 				));
 				#print("signed\n");
 				$signedUrl = $command->createPresignedUrl($expiry_time);
+
+				# Redirect the user to the signed storage URL.
 				#print('Location: '.$signedUrl."\n");
 				header('Location: '.$signedUrl);
 
