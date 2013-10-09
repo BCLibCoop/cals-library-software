@@ -28,8 +28,28 @@
 <title>{block name="pageTitle"}{$smarty.config.libraryName}{/block}</title>
 
 {/block} {* end head block *}
-
 </head>
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.libraries.coop/piwik/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "2"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><!-- Piwik Image Tracker -->
+<img src="https://piwik.libraries.coop/piwik/piwik.php?idsite=2&amp;rec=1"
+style="border:0" alt="" />
+<!-- End image tracker-->
+</noscript>
+<!-- End Piwik Code -->
 <body>
 <div id="header">
 	<div id="logo">
